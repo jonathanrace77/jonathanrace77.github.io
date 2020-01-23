@@ -1,6 +1,17 @@
+body{
+  font-family: 'Arial', sans-serif;
+}
+
+main{
+  position: absolute;
+  width: 100vw;
+  top: 0px;
+  left: 0px;
+}
+
 #navbar {
     position: fixed;
-    top: 0px;
+    top: -50px;
     left: 0px;
     background: white;
     width: 100%;
@@ -45,16 +56,18 @@
   
   h1 {
     color: #ffffff;
+    font-size: 5vh;
+    font-weight: 500;
   }
   
   p {
     color: #cccccc;
+    font-size: 2vh;
   }
   
   #welcome-section {
     height: 100vh;
     display: flex;
-    left: 0px;
     align-items: center;
     justify-content: center;
     background: #444444;
@@ -67,14 +80,6 @@
     justify-content: center;
     background: #ffffff;
   }
-
-
-  main{
-    position: absolute;
-    width: 100vw;
-    left: 0px;
-  }
-
   
   #aboutme {
     height: 100vh;
