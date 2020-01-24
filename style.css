@@ -26,33 +26,42 @@ main{
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    height: 100%;
-    background: #77bbff;
+    height: 50px;
+    background: #5a6478;
+    margin: 0;
+    padding: 0;
+    border-width: 0px;
   }
   
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #f1f1f1;
+    
   }
   
   li {
     float: left;
+    margin: 0;
   }
   
   li a {
+    
     display: block;
-    color: #000;
-    background: #77bbff;
+    color: #fff;
     padding: 13px 16px;
     text-decoration: none;
+    background-color: #5a6478;
+    border: solid #5a6478;
+    width: 70px;
+    text-align: center;
   }
   
   li a:hover {
-    color: white;
-    background: #222222;
+    display: block;
     text-decoration: none;
+    border: solid white;
+    border-width: 2px;
   }
   
   h1 {
