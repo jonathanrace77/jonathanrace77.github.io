@@ -53,6 +53,7 @@ main{
     text-decoration: none;
     background-color: #5a6478;
     border: solid #5a6478;
+    border-width: 2px;
     width: 70px;
     text-align: center;
   }
