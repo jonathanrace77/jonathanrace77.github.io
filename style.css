@@ -1,5 +1,5 @@
 body{
-  font-family: 'Arial', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background: #4a3d4d;
   background: white;
 }
@@ -74,7 +74,7 @@ main{
   }
 
   h2 {
-    color: #black;
+    color: black;
     font-size: 4vh;
     font-weight: 500;
   }
@@ -103,14 +103,8 @@ main{
     justify-content: center;
     background: #4a3d4d;
     color: #ffffff;
-/*
-    top: 0px;
-    width: 100vw;
-    transform: skewY(-10deg);
-    z-index: 1;
-*/
-	
-    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
 	  padding: 0px 0px;
   }
 
