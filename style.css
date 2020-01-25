@@ -1,5 +1,5 @@
 body{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   background: #4a3d4d;
   background: white;
 }
@@ -120,7 +120,7 @@ main{
     background: white;
     color: black;
 
-    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
   }
 
   #skills > div {
@@ -135,7 +135,7 @@ main{
     background: #544e60;
     color: #ffffff;
 
-    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
 	  padding: 0px 0px;
   }
 
@@ -151,7 +151,7 @@ main{
     background: white;
     color: black;
 
-    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
 	  padding: 0px 0px;
   }
 
