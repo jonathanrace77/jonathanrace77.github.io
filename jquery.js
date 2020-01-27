@@ -24,10 +24,10 @@ function mobileMenu() {
 
 $(window).on('resize', function(event){
 	var windowSize = $(window).width(); // Could've done $(this).width()
-    if(windowSize > 600){
+    if(windowSize > 800){
         document.getElementById('navbar').style.display = 'block';
         document.getElementById("navcontents").className = "topnav";
-    } else if(windowSize <= 600){
+    } else if(windowSize <= 800){
         document.getElementById('navbar').style.display = 'none';
         
     }
