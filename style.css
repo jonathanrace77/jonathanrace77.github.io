@@ -12,6 +12,7 @@ main{
 }
 
 #navbar {
+    display: block;
     position: fixed;
     top: -50px;
     left: 0px;
@@ -28,11 +29,14 @@ main{
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    height: 50px;
+    height: 54px;
     background: #5a6478;
+
+    border: solid #5a6478;
+    border-width: 0px;
+
     margin: 0;
     padding: 0;
-    border-width: 0px;
   }
   
   ul {
@@ -112,6 +116,12 @@ main{
     
   }
 
+  div.a {
+
+    margin: -2vh;
+
+  }
+
   #skills {
     height: 100vh;
     display: flex;
@@ -141,6 +151,10 @@ main{
 
   #projects > div {
     
+  }
+
+  #projects h2 {
+    color: white;
   }
   
   #aboutme {
@@ -192,12 +206,19 @@ main{
     height: auto;
   }
 
-  .topnav .icon {
+  #mobilemenubutton .icon {
     display: none;
+    color: #cccccc;
+  }
+
+  #mobilemenubutton .icon a{
+    display: none;
+    color: #cccccc;
   }
   
   @media only screen and (max-width: 600px) {
-    #mobilemenubutton{
+    #mobilemenubutton .icon{
+      display: block;
       position: fixed;
       top: 10px;
       right: 10px;
@@ -208,12 +229,6 @@ main{
       display: flex;
       flex-wrap: wrap;
       width: 80vw;
-      justify-content: center;
-    }
-  
-    #projects {
-      height: 100%;
-      display: flex;
       justify-content: center;
     }
 
@@ -246,11 +261,10 @@ main{
     border-width: 0px;
     }
 
-    .topnav.responsive > ul > li{
-    
+    .topnav.responsive > ul > li {
     
     float: none;
-     
+  
     }
 
     .topnav.responsive > ul > li a {
@@ -265,18 +279,34 @@ main{
       width: 100vw;
       height: 50px;
       align-items: center;
-      justify-content: center;
     }
 
     .topnav.responsive > ul > li a:hover {
-      display: block;
       text-decoration: none;
-      border: solid white;
+      border: solid #5a6478;
       border-width: 2px;
-      
+      color: #5a6478;
+      background: white;
     }
 
 }
-  
-  
-  
+
+@media only screen and (min-width: 601px) {
+
+#navbar{
+  display: block;
+}
+
+#navcontents{
+  display: block;
+}
+
+.navbar{
+  display: block;
+}
+
+.navcontents{
+  display: block;
+}
+
+}

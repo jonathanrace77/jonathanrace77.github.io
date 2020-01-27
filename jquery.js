@@ -7,6 +7,8 @@ $(document).ready(function() {
     $("#navbar").animate({ top: '0px' }, 800);
     });
 
+
+    
 function mobileMenu() {
     var x = document.getElementById("navcontents");
     if (x.className === "topnav") {
@@ -14,6 +16,19 @@ function mobileMenu() {
     document.getElementById('navbar').style.display = 'block';
     } else {
     x.className = "topnav";
-    document.getElementById('navbar').style.display = 'none';
+        document.getElementById('navbar').style.display = 'none';
     }
 }
+
+
+
+$(window).on('resize', function(event){
+	var windowSize = $(window).width(); // Could've done $(this).width()
+    if(windowSize > 600){
+        document.getElementById('navbar').style.display = 'block';
+        document.getElementById("navcontents").className = "topnav";
+    } else if(windowSize <= 600){
+        document.getElementById('navbar').style.display = 'none';
+        
+    }
+});
