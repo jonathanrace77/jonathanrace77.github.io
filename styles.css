@@ -7,6 +7,10 @@ html {
   scroll-snap-type: y mandatory;
 }
 
+b{
+  color: #444;
+}
+
 section {
   height: 100vh;
   scroll-snap-align: start;
@@ -20,27 +24,25 @@ section {
 body {
   font-family: 'Montserrat';
   background: #5C5757;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 #navbar {
   display: block;
   position: fixed;
   top: -50px;
-  left: 0;
-  width: 100%;
-  height: 50px;
+  width: 70vw;
   align-items: center;
   justify-content: center;
   z-index: 5;
+  margin: 10px;
 }
 #navcontents {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  height: 54px;
-  border: solid #5a6478;
-  border-width: 0;
   margin: 0;
   padding: 0;
 }
@@ -53,15 +55,13 @@ ul {
 li {
   float: left;
   margin: 0;
-  font-size: 2.3vh;
+  font-size: 1.3vw;
+  width: 9.5vw;
 }
 li a {
   display: block;
   color: #fff;
-  padding: 13px 16px;
   text-decoration: none;
-  width: 80px;
-  text-align: center;
 }
 li a:hover {
   text-decoration: underline;
@@ -74,7 +74,7 @@ h1 {
 }
 h2 {
   color: #000;
-  font-size: 4vh;
+  font-size: 5.5vh;
   font-weight: 500;
 }
 p {
@@ -106,17 +106,30 @@ div.a {
   
 }
 
-#skills-container{
-  display: flex;
+#skills-text{
+  width: 30vw;
+}
 
+#skills-container{
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  width: 100vw;
+  height: 100vh;
 }
 
 #skills-left{
-  width: 50vw;
+  margin: 14vh 10px 14vh 10px;
+  height: 75vh;
+  display: block;
+}
+
+#skills-left h2{
+  margin: 0px;
 }
 
 #skills-right{
-  width: 50vw;
+  margin: 14vh 10px 14vh 10px;
+  height: 75vh;
 }
 
 .flex-container {
@@ -125,22 +138,28 @@ div.a {
   justify-content: center;
   flex-wrap: wrap;
   width: 80vw;
-  height: 50vw;
+  height: 75vh;
   max-width: 100%;
-  max-height: 85vh;
-  justify-content: center;
+  max-height: 100vh;
   grid-row: 2;
+  justify-content: space-between;
 }
 
 .flex-container > div {
   width: auto;
-  margin: 10px;
+  margin: 0px;
   text-align: center;
-  flex: 50%;
-  max-width: 100px;
+  flex: 33%;
 }
 
-#projects {
+#skills > div > div img {
+  width: 5vw;
+  height: 5vw;
+  max-width: 7vw;
+  max-height: 7vw;
+}
+
+#portfolio {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -149,7 +168,7 @@ div.a {
   color: #fff;
   padding: 0 0;
 }
-#projects > div {
+#portfolio > div {
   width: 80vw;
   display: block;
   align-items: center;
@@ -160,7 +179,7 @@ div.a {
   height: 70vh;
   grid-column: auto;
 }
-#projects > div > div {
+#portfolio > div > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,7 +194,7 @@ div.a {
 #projects h2 {
   color: #fff;
 }
-#aboutme {
+#about {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -184,7 +203,7 @@ div.a {
   color: #000;
   padding: 0 0;
 }
-#aboutme > div {
+#about > div {
   padding: 5vh;
 }
 footer {
@@ -226,12 +245,7 @@ img {
   max-height: 130px;
   border-radius: 5%;
 }
-#skills > div > div img {
-  width: 10vw;
-  height: 10vw;
-  max-width: 7vw;
-  max-height: 7vw;
-}
+
 #mobilemenubutton .icon {
   display: none;
   color: #ccc;
@@ -315,4 +329,50 @@ img {
     height: 10vw;
     width: auto;
   }
-}
+
+    #skills-container{
+      width: 100vw;
+      height: 100vh;
+    }
+    
+    #skills-left{
+      margin: 10px 10px 10px 10px;
+      height: 50vh;
+      display: block;
+    }
+  
+    
+    #skills-right{
+      margin: 0px 0px 0px 0px;
+      height: 50vh;
+    }
+    #skills-text{
+      width: 100vw;
+    }
+    .flex-container > div {
+      width: auto;
+      margin: 0px;
+      text-align: center;
+      flex: 25%;
+    }
+    
+    #skills > div > div img {
+      width: 4vw;
+      height: 4vw;
+      max-width: 6vw;
+      max-height: 6vw;
+    }
+
+    .flex-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100vw;
+      height: 75vh;
+      max-width: 100%;
+      max-height: 100%;
+      grid-row: 2;
+      justify-content: space-between;
+    }
+  }
