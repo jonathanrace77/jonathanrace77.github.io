@@ -11,6 +11,18 @@ b{
   color: #444;
 }
 
+@keyframes bounce-effect {
+  0%   {transform: translateY(0px)}
+  50%  {transform: translateY(10px)}
+  100% {transform: translateY(0px)}
+}
+.moving-arrow{
+display: inline-block;
+animation-name: bounce-effect;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+}
+
 section {
   height: 100vh;
   scroll-snap-align: start;
@@ -98,6 +110,32 @@ div.a {
   margin: -3.7vh;
 }
 
+#down-arrow1{
+  position: absolute;
+  bottom: 0px;
+}
+
+#down-arrow2{
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
+text-align: center;
+}
+
+
+
+#down-arrow1 .icon{
+  color: #FFF;
+}
+
+#down-arrow2 .icon{
+  color: #000;
+}
+
+#down-arrow3 .icon{
+  color: #000;
+}
+
 #skills {
   height: 100vh;
   display: flex;
@@ -115,12 +153,15 @@ div.a {
   grid-template-columns: 50vw 50vw;
   width: 100vw;
   height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 #skills-left{
   margin: 14vh 10px 14vh 10px;
   height: 75vh;
   display: block;
+
 }
 
 #skills-left h2{
@@ -130,6 +171,7 @@ div.a {
 #skills-right{
   margin: 14vh 10px 14vh 10px;
   height: 75vh;
+
 }
 
 .flex-container {
@@ -159,38 +201,14 @@ div.a {
   max-height: 7vw;
 }
 
-#portfolio {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #FFF;
-  color: #fff;
-  padding: 0 0;
+#down-arrow3{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100vw;
+text-align: center;
 }
-#portfolio > div {
-  width: 80vw;
-  display: block;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 80vw;
-  justify-content: center;
-  height: 70vh;
-  grid-column: auto;
-}
-#portfolio > div > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  grid-column: auto;
-  margin: 0;
-  text-align: center;
-  flex: 50%;
-  height: 70vh;
-}
+
 #projects h2 {
   color: #fff;
 }
@@ -218,18 +236,55 @@ footer {
 }
 
 .flex-container2 {
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
-  width: 80vw;
+  flex-wrap: wrap;
+  width: 75vw;
+  grid-template-columns: 25vw 25vw 25vw;
 }
 .flex-container2 > div {
   height: 50%;
-  width: auto;
+  width: 25vw;
   margin: auto;
   text-align: center;
-  
+  margin: 0px;
+}
+
+#portfolio {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF;
+  color: #fff;
+  padding: 0 0;
+}
+
+#portfolio > div {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: center;
+  height: 100vh;
+  grid-column: auto;
+}
+
+#portfolio-container{
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+}
+
+#portfolio-container-project{
+  height: 100vh;
+  top: 0px;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-rows: 25vh 50vh;
 }
 
 .flex-container > div > p {
@@ -243,7 +298,6 @@ img {
   height: 15vw;
   max-width: 130px;
   max-height: 130px;
-  border-radius: 5%;
 }
 
 #mobilemenubutton .icon {
@@ -255,11 +309,19 @@ img {
   color: #ccc;
 }
 @media only screen and (max-width: 600px) {
+  #portfolio-container-project{
+    height: 100vh;
+    top: 0px;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 10vh 75vh;
+  }
+
   .flex-container2 > div {
-    height: 15vh;
     width: auto;
-    margin: -80px 20px 0px 20px;
     text-align: center;
+    height: 25vh;
   }
   .flex-container2 > div img {
     height: 100%;
