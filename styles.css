@@ -1,26 +1,32 @@
-
 html {
   overflow: scroll;
   height: 100vh;
   scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
-b{
-  color: #444;
+b {
+  color: #000;
 }
 
 @keyframes bounce-effect {
-  0%   {transform: translateY(0px)}
-  50%  {transform: translateY(10px)}
-  100% {transform: translateY(0px)}
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
-.moving-arrow{
-display: inline-block;
-animation-name: bounce-effect;
-animation-duration: 2s;
-animation-iteration-count: infinite;
+.moving-arrow {
+  display: inline-block;
+  animation-name: bounce-effect;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
 section {
@@ -29,13 +35,9 @@ section {
   position: relative;
 }
 
-#snap-container{
-
-}
-
 body {
-  font-family: 'Montserrat';
-  background: #5C5757;
+  font-family: "Montserrat";
+  background: #5c5757;
   margin-right: 0px;
   margin-left: 0px;
 }
@@ -45,11 +47,10 @@ body {
   position: fixed;
   top: -50px;
   width: 70vw;
-  align-items: center;
-  justify-content: center;
   z-index: 5;
   margin: 10px;
 }
+/* the above is all useful CSS */
 #navcontents {
   display: flex;
   flex-direction: row;
@@ -77,7 +78,7 @@ li a {
 }
 li a:hover {
   text-decoration: underline;
-  color: #BACEE0;
+  color: #bacee0;
 }
 h1 {
   color: #fff;
@@ -90,9 +91,10 @@ h2 {
   font-weight: 500;
 }
 p {
-  color: #ccc;
+  color: #5c5757;
   font-size: 2vh;
 }
+
 #welcome-section {
   height: 100vh;
   display: flex;
@@ -101,8 +103,8 @@ p {
   padding: 0 0;
 }
 
-#welcome-section p{
-  color: #BACEE0;
+#welcome-section p {
+  color: #bacee0;
   font-size: 3vh;
 }
 
@@ -110,45 +112,42 @@ div.a {
   margin: -3.7vh;
 }
 
-#down-arrow1{
+#down-arrow1 {
   position: absolute;
   bottom: 0px;
 }
 
-#down-arrow2{
+#down-arrow2 {
   position: absolute;
   bottom: 0px;
   width: 100vw;
-text-align: center;
+  text-align: center;
 }
 
-
-
-#down-arrow1 .icon{
-  color: #FFF;
+#down-arrow1 .icon {
+  color: #fff;
 }
 
-#down-arrow2 .icon{
+#down-arrow2 .icon {
   color: #000;
 }
 
-#down-arrow3 .icon{
+#down-arrow3 .icon {
   color: #000;
 }
 
 #skills {
   height: 100vh;
   display: flex;
-  background: #FFF;
+  background: #fff;
   color: #000;
-  
 }
 
-#skills-text{
+#skills-text {
   width: 30vw;
 }
 
-#skills-container{
+#skills-container {
   display: grid;
   grid-template-columns: 50vw 50vw;
   width: 100vw;
@@ -157,21 +156,19 @@ text-align: center;
   justify-content: center;
 }
 
-#skills-left{
+#skills-left {
   margin: 14vh 10px 14vh 10px;
   height: 75vh;
   display: block;
-
 }
 
-#skills-left h2{
+#skills-left h2 {
   margin: 0px;
 }
 
-#skills-right{
+#skills-right {
   margin: 14vh 10px 14vh 10px;
   height: 75vh;
-
 }
 
 .flex-container {
@@ -201,12 +198,12 @@ text-align: center;
   max-height: 7vw;
 }
 
-#down-arrow3{
+#down-arrow3 {
   position: absolute;
   bottom: 0px;
   left: 0px;
   width: 100vw;
-text-align: center;
+  text-align: center;
 }
 
 #projects h2 {
@@ -256,7 +253,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #FFF;
+  background: #fff;
   color: #fff;
   padding: 0 0;
 }
@@ -272,13 +269,13 @@ footer {
   grid-column: auto;
 }
 
-#portfolio-container{
+#portfolio-container {
   display: grid;
   width: 100vw;
   height: 100vh;
 }
 
-#portfolio-container-project{
+#portfolio-container-project {
   height: 100vh;
   top: 0px;
   align-items: center;
@@ -309,7 +306,7 @@ img {
   color: #ccc;
 }
 @media only screen and (max-width: 600px) {
-  #portfolio-container-project{
+  #portfolio-container-project {
     height: 100vh;
     top: 0px;
     align-items: center;
@@ -336,17 +333,56 @@ img {
     right: 10px;
     z-index: 10;
   }
-  
+
+  #navbar {
+    display: block;
+    position: fixed;
+    top: -50px;
+    width: 70vw;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    margin: 10px;
+  }
+  #navcontents {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
   #navcontents {
     height: 100vh;
-    width: 50vw;
+    width: 100vw;
     position: absolute;
     right: 0;
+    background: #5c5757;
   }
   #navbar {
     display: none;
     height: 0;
+    margin: 0px;
+    width: 100vw;
   }
+
+  ul {
+    display: grid;
+    width: 100vw;
+    margin: 0;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  li {
+    margin: 0;
+    font-size: 5.3vw;
+    width: 100vw;
+    height: 25%;
+    text-align: center;
+  }
+
   .topnav a:not(:first-child) {
     display: none;
   }
@@ -354,17 +390,17 @@ img {
     float: right;
     display: block;
   }
-  #skills-container{
+  #skills-container {
     display: flex;
     flex-direction: column;
   }
 
-  #skills-left{
+  #skills-left {
     width: 100vw;
     height: 50vh;
   }
-  
-  #skills-right{
+
+  #skills-right {
     width: 100vw;
     height: 50vh;
   }
@@ -392,49 +428,48 @@ img {
     width: auto;
   }
 
-    #skills-container{
-      width: 100vw;
-      height: 100vh;
-    }
-    
-    #skills-left{
-      margin: 10px 10px 10px 10px;
-      height: 50vh;
-      display: block;
-    }
-  
-    
-    #skills-right{
-      margin: 0px 0px 0px 0px;
-      height: 50vh;
-    }
-    #skills-text{
-      width: 100vw;
-    }
-    .flex-container > div {
-      width: auto;
-      margin: 0px;
-      text-align: center;
-      flex: 25%;
-    }
-    
-    #skills > div > div img {
-      width: 4vw;
-      height: 4vw;
-      max-width: 6vw;
-      max-height: 6vw;
-    }
-
-    .flex-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      width: 100vw;
-      height: 75vh;
-      max-width: 100%;
-      max-height: 100%;
-      grid-row: 2;
-      justify-content: space-between;
-    }
+  #skills-container {
+    width: 100vw;
+    height: 100vh;
   }
+
+  #skills-left {
+    margin: 10px 10px 10px 10px;
+    height: 50vh;
+    display: block;
+  }
+
+  #skills-right {
+    margin: 0px 0px 0px 0px;
+    height: 50vh;
+  }
+  #skills-text {
+    width: 100vw;
+  }
+  .flex-container > div {
+    width: auto;
+    margin: 0px;
+    text-align: center;
+    flex: 25%;
+  }
+
+  #skills > div > div img {
+    width: 4vw;
+    height: 4vw;
+    max-width: 6vw;
+    max-height: 6vw;
+  }
+
+  .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 75vh;
+    max-width: 100%;
+    max-height: 100%;
+    grid-row: 2;
+    justify-content: space-between;
+  }
+}

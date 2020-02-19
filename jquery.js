@@ -27,6 +27,7 @@ $(window).on("resize", function(event) {
   if (windowSize > 600) {
     document.getElementById("navbar").style.display = "block";
     document.getElementById("navcontents").className = "topnav";
+    $("li a").css("color", "#FFF");
   } else if (windowSize <= 600) {
     document.getElementById("navbar").style.display = "none";
   }
@@ -34,7 +35,7 @@ $(window).on("resize", function(event) {
 
 //Set menu colours (based on screen position)
 $(window).scroll(function() {
-  if ($(document).scrollTop() / $(window).height() > 1 - 0.03) {
+  if ($(document).scrollTop() / $(window).height() > 1 - 0.03 && $(window).width()>600) {
     $("li a").css("color", "#5C5757");
   } else {
     $("li a").css("color", "#FFF");
@@ -45,14 +46,14 @@ $(window).scroll(function() {
 $(document).ready(function() {
   $("li a").hover(
     function() {
-      if ($(document).scrollTop() / $(window).height() > 1 - 0.03) {
+      if ($(document).scrollTop() / $(window).height() > 1 - 0.03 && $(window).width()>600) {
         $(this).css("color", "#464646");
       } else {
         $(this).css("color", "#BACEE0");
       }
     },
     function() {
-      if ($(document).scrollTop() / $(window).height() > 1 - 0.03) {
+      if ($(document).scrollTop() / $(window).height() > 1 - 0.03 && $(window).width()>600) {
         $(this).css("color", "#464646");
       } else {
         $(this).css("color", "#FFF");
