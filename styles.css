@@ -208,7 +208,7 @@ div.a {
 #projects h2 {
   color: #fff;
 }
-#about {
+#contact {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -217,7 +217,7 @@ div.a {
   color: #000;
   padding: 0 0;
 }
-#about > div {
+#contact > div {
   padding: 5vh;
 }
 

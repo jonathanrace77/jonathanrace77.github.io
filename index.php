@@ -213,13 +213,49 @@
     </section>
     
 
-    <section id="about">
-      <div id="about-container">
+    <section id="contact">
+      <div id="contact-container">
       <div align="center">
-        <h2>Check out <a href="https://github.com/jonathanrace77" target="_blank" id="profile-link">My Github
-            Profile</a> for further examples of my work.</h2>
+        <h2>Contact</h2>
+        <p>Any questions before we <b>start</b>?</p>
       </div>
-      
+      <div id="contact-form">
+        <?php
+$action=$_REQUEST['action'];
+if ($action=="")    /* display the contact form */
+    {
+    ?>
+    <form  action="" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="action" value="submit">
+    Your name:<br>
+    <input name="name" type="text" value="" size="30"/><br>
+    Your email:<br>
+    <input name="email" type="text" value="" size="30"/><br>
+    Your message:<br>
+    <textarea name="message" rows="7" cols="30"></textarea><br>
+    <input type="submit" value="Send email"/>
+    </form>
+    <?php
+    } 
+else                /* send the submitted data */
+    {
+    $name=$_REQUEST['name'];
+    $email=$_REQUEST['email'];
+    $message=$_REQUEST['message'];
+    if (($name=="")||($email=="")||($message==""))
+        {
+        echo "All fields are required, please fill <a href=\"\">the form</a> again.";
+        }
+    else{        
+        $from="From: $name<$email>\r\nReturn-path: $email";
+        $subject="Message sent using your contact form";
+        mail("jonathanrace@me.com", $subject, $message, $from);
+        echo "Email sent!";
+        }
+    }  
+?>
+      </div>
+    
       <footer>
         <div></div>
       </footer>
