@@ -48,6 +48,7 @@ body {
   top: -50px;
   width: 70vw;
   margin: 10px;
+  z-index: 15;
 }
 /* the above is all useful CSS */
 #navcontents {
@@ -63,17 +64,20 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  
 }
 li {
   float: left;
   margin: 0;
   font-size: 1.3vw;
   width: 9.5vw;
+  
 }
 li a {
   display: block;
-  color: #fff;
+  color: #FFF;
   text-decoration: none;
+  
 }
 li a:hover {
   text-decoration: underline;
@@ -211,7 +215,7 @@ div.a {
 #contact {
   height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: top;
   justify-content: center;
   background: #fff;
   color: #000;
@@ -324,6 +328,23 @@ img {
   display: none;
   color: #ccc;
 }
+
+#name{
+  width: 20vw;
+  padding: 0px;
+}
+
+#email{
+  width: 20vw;
+  padding: 0px;
+}
+
+#message{
+  width: 20vw;
+  vertical-align: top;
+  padding: 0px 0px 80px 0px;
+}
+
 @media only screen and (max-width: 600px) {
   #portfolio-container-project {
     height: 100vh;

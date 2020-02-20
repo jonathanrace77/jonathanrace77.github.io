@@ -25,7 +25,7 @@
           <a href=#portfolio>Portfolio</a>
         </li>
         <li class="link">
-          <a href=#about>About</a>
+          <a href=#contact>Contact</a>
         </li>
 
       </ul>
@@ -220,40 +220,21 @@
         <p>Any questions before we <b>start</b>?</p>
       </div>
       <div id="contact-form">
-        <?php
-$action=$_REQUEST['action'];
-if ($action=="")    /* display the contact form */
-    {
-    ?>
-    <form  action="" method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="action" value="submit">
-    Your name:<br>
-    <input name="name" type="text" value="" size="30"/><br>
-    Your email:<br>
-    <input name="email" type="text" value="" size="30"/><br>
-    Your message:<br>
-    <textarea name="message" rows="7" cols="30"></textarea><br>
-    <input type="submit" value="Send email"/>
-    </form>
-    <?php
-    } 
-else                /* send the submitted data */
-    {
-    $name=$_REQUEST['name'];
-    $email=$_REQUEST['email'];
-    $message=$_REQUEST['message'];
-    if (($name=="")||($email=="")||($message==""))
-        {
-        echo "All fields are required, please fill <a href=\"\">the form</a> again.";
-        }
-    else{        
-        $from="From: $name<$email>\r\nReturn-path: $email";
-        $subject="Message sent using your contact form";
-        mail("jonathanrace@me.com", $subject, $message, $from);
-        echo "Email sent!";
-        }
-    }  
-?>
+
+
+
+        <form action="https://usebasin.com/f/e981dacb641c" method="POST">
+          <label for="name"></label>
+          <input type="text" id="name" name="name" placeholder="Name" required><br>
+          <label for="email-address"></label>
+          <input type="email" id="email" name="email" placeholder="Email" required><br>
+          <label for="message"></label>
+          <input type="text" id="message" name="message" placeholder="Message" required><br>
+          <button type="submit">Submit</button>
+          </form>
+
+
+
       </div>
     
       <footer>

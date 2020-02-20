@@ -49,6 +49,7 @@ $(window).scroll(function() {
     $(document).scrollTop() / $(window).height() > 1 - 0.03 &&
     $(window).width() > 600
   ) {
+    console.log('Im changing color');
     $("li a").css("color", "#5C5757");
   } else {
     $("li a").css("color", "#FFF");
