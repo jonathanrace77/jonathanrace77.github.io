@@ -22,6 +22,16 @@ function mobileMenu() {
   }
 }
 
+//Mobile link clicked -> close menu
+$(document).ready(function() {
+  $("li").on("click", function() {
+    if (document.getElementById("navcontents").className != "topnav") {
+      document.getElementById("navcontents").className = "topnav";
+      document.getElementById("navbar").style.display = "none";
+    }
+  });
+});
+
 $(window).on("resize", function(event) {
   var windowSize = $(window).width(); // Could've done $(this).width()
   if (windowSize > 600) {
@@ -35,7 +45,10 @@ $(window).on("resize", function(event) {
 
 //Set menu colours (based on screen position)
 $(window).scroll(function() {
-  if ($(document).scrollTop() / $(window).height() > 1 - 0.03 && $(window).width()>600) {
+  if (
+    $(document).scrollTop() / $(window).height() > 1 - 0.03 &&
+    $(window).width() > 600
+  ) {
     $("li a").css("color", "#5C5757");
   } else {
     $("li a").css("color", "#FFF");
@@ -46,14 +59,20 @@ $(window).scroll(function() {
 $(document).ready(function() {
   $("li a").hover(
     function() {
-      if ($(document).scrollTop() / $(window).height() > 1 - 0.03 && $(window).width()>600) {
+      if (
+        $(document).scrollTop() / $(window).height() > 1 - 0.03 &&
+        $(window).width() > 600
+      ) {
         $(this).css("color", "#464646");
       } else {
         $(this).css("color", "#BACEE0");
       }
     },
     function() {
-      if ($(document).scrollTop() / $(window).height() > 1 - 0.03 && $(window).width()>600) {
+      if (
+        $(document).scrollTop() / $(window).height() > 1 - 0.03 &&
+        $(window).width() > 600
+      ) {
         $(this).css("color", "#464646");
       } else {
         $(this).css("color", "#FFF");
@@ -63,14 +82,19 @@ $(document).ready(function() {
 });
 
 //Bouncing arrow icon
-$('img').hover( 
-  function() { $(this).data('bounce', true); bounce($(this));}, 
-  function() { $(this).data('bounce', false);
-});
+$("img").hover(
+  function() {
+    $(this).data("bounce", true);
+    bounce($(this));
+  },
+  function() {
+    $(this).data("bounce", false);
+  }
+);
 
 function bounce($elem) {
-  $elem.effect('bounce', { times: 1, distance: 10 }, 500, function() {
-      if ($(this).data('bounce')) bounce($elem);
-      else $elem.stop();
+  $elem.effect("bounce", { times: 1, distance: 10 }, 500, function() {
+    if ($(this).data("bounce")) bounce($elem);
+    else $elem.stop();
   });
 }
