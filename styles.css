@@ -11,6 +11,19 @@ b {
   color: #000;
 }
 
+#circle{
+  position: absolute;
+  left: -80px;
+  top: -100px;
+  height: 240px;
+  width: 240px;
+  background-color: #555;
+  border: solid;
+  border-color: #544E4E;
+  border-width: 7px;
+  border-radius: 50%;
+}
+
 @keyframes bounce-effect {
   0% {
     transform: translateY(0px);
@@ -225,6 +238,11 @@ div.a {
   padding: 5vh;
 }
 
+#contact-form{
+  display: grid;
+  text-align: center;
+}
+
 #clip{
   background: #5c5757;
   height: 100px;
@@ -330,19 +348,58 @@ img {
 }
 
 #name{
-  width: 20vw;
+  width: 230px;
   padding: 0px;
+  margin: 2px;
 }
 
 #email{
-  width: 20vw;
+  width: 230px;
   padding: 0px;
+  margin: 2px;
 }
 
 #message{
-  width: 20vw;
+  width: 230px;
   vertical-align: top;
   padding: 0px 0px 80px 0px;
+  margin: 2px;
+}
+
+#submit-button{
+  color: #FFF;
+  background: #5AD07D;
+  width: 100px;
+  height: 25px;
+  margin: 5px;
+}
+
+#link-pictures-container{
+  display: grid;
+  width: 100vw;
+  justify-content: center;
+}
+
+#link-pictures{
+  display: flex;
+  width: 300px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+#link-pictures img{
+  width: 30px;
+  height: auto;
+}
+
+#copright{
+  text-align: center;
+  font-weight: 100;
+  font-size: 14px;
+  color: #FFF;
+  padding-bottom: 5px;
 }
 
 @media only screen and (max-width: 600px) {
