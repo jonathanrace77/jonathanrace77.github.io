@@ -250,7 +250,7 @@ div.a {
   left: 0px;
   bottom: 9.9vh;
   width: 100vw;
-  clip-path: polygon(50% 70%, 0% 100%, 100% 100%);
+  -webkit-clip-path: polygon(50% 70%, 0% 100%, 100% 100%);
   z-index: 40;
 }
 
