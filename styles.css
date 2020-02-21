@@ -11,19 +11,6 @@ b {
   color: #000;
 }
 
-#circle{
-  position: absolute;
-  left: -80px;
-  top: -100px;
-  height: 240px;
-  width: 240px;
-  background-color: #555;
-  border: solid;
-  border-color: #544E4E;
-  border-width: 7px;
-  border-radius: 50%;
-}
-
 @keyframes bounce-effect {
   0% {
     transform: translateY(0px);
@@ -40,6 +27,24 @@ b {
   animation-name: bounce-effect;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+}
+#video-container{
+  position: absolute;
+  z-index: -500;
+  background-color:red;
+}
+
+#stars-video{
+  background-color:red;
+}
+
+#overlay{
+  position: absolute;
+  z-index: -50;
+  width: 100vw;
+  height: 100vh;
+  background-color:#5c5757;
+  opacity: 0%;
 }
 
 section {
@@ -248,21 +253,21 @@ div.a {
   height: 100px;
   position: absolute;
   left: 0px;
-  bottom: 9.9vh;
+  bottom: 10vh;
   width: 100vw;
-  -webkit-clip-path: polygon(50% 70%, 0% 100%, 100% 100%);
-  z-index: 40;
+  -webkit-clip-path: polygon(0 100%, 0 50%, 50% 35%, 100% 50%, 100% 100%);
+  z-index: 60;
 }
 
 footer {
   position: absolute;
-  padding: 0;
+  padding-bottom: 10px;
   width: 100vw;
   bottom: 0vh;
   left: 0px;
   display: block;
-  z-index: 50;
-  height: 10vh;
+  z-index: 70;
+  height: 12vh;
   background: #5c5757;
   border: none;
 }
