@@ -31,11 +31,11 @@ b {
 #video-container{
   position: absolute;
   z-index: -500;
-  background-color:red;
+  background-color:#000;
 }
 
 #stars-video{
-  background-color:red;
+  background-color:#000;
 }
 
 #overlay{
@@ -55,7 +55,7 @@ section {
 
 body {
   font-family: "Montserrat";
-  background: #5c5757;
+  background: #000;
   margin-right: 0px;
   margin-left: 0px;
 }
