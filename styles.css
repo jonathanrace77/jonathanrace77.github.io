@@ -29,7 +29,7 @@ b {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(10px);
+    transform: translateY(5px);
   }
   100% {
     transform: translateY(0px);
@@ -273,7 +273,9 @@ footer {
   justify-content: center;
   flex-wrap: wrap;
   width: 75vw;
-  grid-template-columns: 25vw 25vw 25vw;
+  height: 60vh;
+  grid-template-columns: 20vw 20vw 20vw;
+  grid-template-rows: 20vh 20vh 20vh;
 }
 .flex-container2 > div {
   height: 100%;
@@ -284,8 +286,8 @@ footer {
 }
 
 .flex-container2 > div img {
-  height: auto;
-  width: 100%;
+  height: 100%;
+  width: auto;
   text-align: center;
 }
 
@@ -412,22 +414,9 @@ img {
     grid-template-rows: 10vh 75vh;
   }
 
-  .flex-container2 {
-    margin: 20px;
-    height: 65vh;
-    width: 80vw;
-  }
-
-  .flex-container2 > div {
-    width: auto;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-  }
   .flex-container2 > div img {
     height: auto;
     width: 100%;
-    text-align: center;
   }
 
   #mobilemenubutton .icon {
@@ -524,7 +513,7 @@ img {
     height: 20vw;
     margin: 0;
     text-align: center;
-    font-size: 30px;
+    font-size: 10px;
     flex: 50%;
   }
   #skills > div > div img {
@@ -534,21 +523,23 @@ img {
 
   #skills-container {
     width: 100vw;
-    height: 100vh;
+    height: 100vh; 
   }
 
   #skills-left {
     margin: 10px 10px 10px 10px;
     height: 50vh;
     display: block;
+    width: 80vw;
   }
 
   #skills-right {
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 20px 0px;
     height: 50vh;
+    width: 80vw;
   }
   #skills-text {
-    width: 100vw;
+    width: 80vw;
   }
   .flex-container > div {
     width: auto;
