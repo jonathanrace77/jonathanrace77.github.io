@@ -462,17 +462,18 @@ img {
 
   ul {
     display: grid;
+    grid-row-gap: 0;
     width: 100vw;
     margin: 0;
-    height: 100vh;
+    height: 50vh;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
   }
   li {
     margin: 0;
     font-size: 5.3vw;
     width: 100vw;
-    height: 25%;
+    height: auto;
     text-align: center;
   }
 
@@ -527,10 +528,11 @@ img {
   }
 
   #skills-left {
-    margin: 10px 10px 10px 10px;
+    margin: 2vh 10px 10px 10px;
     height: 50vh;
     display: block;
     width: 80vw;
+    background: green;
   }
 
   #skills-right {
@@ -546,6 +548,7 @@ img {
     margin: 0px;
     text-align: center;
     flex: 25%;
+    background: red;
   }
 
   #skills > div > div img {
@@ -566,5 +569,6 @@ img {
     max-height: 100%;
     grid-row: 2;
     justify-content: space-between;
+    background: blue;
   }
 }
