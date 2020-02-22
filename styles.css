@@ -34,12 +34,13 @@ b {
   background-color:#000;
   height: 100vh;
   width: 100vw;
+  overflow:hidden;
+  display:block;
 }
 
 #stars-video{
   background-color:#000;
-  height: 100vh;
-  width: 100vw;
+
 }
 
 section {
@@ -554,8 +555,8 @@ img {
   }
 
   #skills > div > div img {
-    width: 5vw;
-    height: 5vw;
+    width: 4vw;
+    height: 4vw;
     max-width: 6vw;
     max-height: 6vw;
   }
