@@ -63,6 +63,7 @@ body {
   width: 70vw;
   margin: 10px;
   z-index: 15;
+  left: 0px;
 }
 /* the above is all useful CSS */
 #navcontents {
@@ -425,7 +426,7 @@ img {
     position: fixed;
     top: 10px;
     right: 10px;
-    z-index: 10;
+    z-index: 120;
   }
 /*****************************************************/
   #navbar {
@@ -449,24 +450,27 @@ img {
 
   #navcontents {
     height: 100vh;
-    width: 100vw;
+    width: 50vw;
     position: absolute;
     right: 0;
     background: #5c5757;
+    opacity: 0;
   }
   #navbar {
     display: none;
     opacity: 0;
     height: 0;
     margin: 0px;
-    width: 100vw;
+    width: 50vw;
+    left: 100vw;
+
   }
 
 /*****************************************************/
   ul {
     display: grid;
     grid-row-gap: 0;
-    width: 100vw;
+    width: 50vw;
     margin: 0;
     height: 50vh;
     align-items: center;
@@ -535,7 +539,6 @@ img {
     height: 50vh;
     display: block;
     width: 90vw;
-    background: green;
   }
 
   #skills-right {
@@ -551,7 +554,6 @@ img {
     margin: 0px;
     text-align: center;
     flex: 25%;
-    background: red;
   }
 
   #skills > div > div img {
@@ -572,6 +574,5 @@ img {
     max-height: 100%;
     grid-row: 2;
     justify-content: space-between;
-    background: blue;
   }
 }

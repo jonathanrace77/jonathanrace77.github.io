@@ -16,10 +16,15 @@ function mobileMenu() {
   if (x.className === "topnav") {
     x.className += " responsive";
     document.getElementById("navbar").style.display = "block";
-    $("#navbar").animate({ opacity: 100 }, "slow");
+    $("#navbar").animate({"left": "50vw"}, 300);
+    $("#navcontents").css("opacity", "1");
+    $("#navbar").css("opacity", "0.9");
   } else {
     x.className = "topnav";
-    document.getElementById("navbar").style.display = "none";
+    /*document.getElementById("navbar").style.display = "none";
+    /*$("#navbar").css("opacity", "0");
+    $("#navcontents").css("opacity", "0");*/
+    $("#navbar").animate({"left": "100vw"}, 300);
   }
 }
 
@@ -39,8 +44,10 @@ $(window).on("resize", function(event) {
     document.getElementById("navbar").style.display = "block";
     document.getElementById("navcontents").className = "topnav";
     $("li a").css("color", "#FFF");
+    $("#navbar").css("left", "0px");
   } else if (windowSize <= 600) {
     document.getElementById("navbar").style.display = "none";
+    $("#navbar").css("left", "100vw");
   }
 });
 
