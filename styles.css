@@ -32,19 +32,14 @@ b {
   position: absolute;
   z-index: -500;
   background-color:#000;
+  height: 100vh;
+  width: 100vw;
 }
 
 #stars-video{
   background-color:#000;
-}
-
-#overlay{
-  position: absolute;
-  z-index: -50;
-  width: 100vw;
   height: 100vh;
-  background-color:#5c5757;
-  opacity: 0%;
+  width: 100vw;
 }
 
 section {
@@ -401,7 +396,7 @@ img {
   height: auto;
 }
 
-#copright{
+#copyright{
   text-align: center;
   font-weight: 100;
   font-size: 14px;
