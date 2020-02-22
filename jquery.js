@@ -16,6 +16,7 @@ function mobileMenu() {
   if (x.className === "topnav") {
     x.className += " responsive";
     document.getElementById("navbar").style.display = "block";
+    $("#navbar").animate({ opacity: 100 }, "slow");
   } else {
     x.className = "topnav";
     document.getElementById("navbar").style.display = "none";
