@@ -530,20 +530,20 @@ img {
   }
 
   #skills-left {
-    margin: 2vh 10px 10px 10px;
+    margin: 10px 5px 5px 5px;
     height: 50vh;
     display: block;
-    width: 80vw;
+    width: 90vw;
     background: green;
   }
 
   #skills-right {
     margin: 0px 0px 20px 0px;
     height: 50vh;
-    width: 80vw;
+    width: 90vw;
   }
   #skills-text {
-    width: 80vw;
+    width: 90vw;
   }
   .flex-container > div {
     width: auto;
@@ -554,8 +554,8 @@ img {
   }
 
   #skills > div > div img {
-    width: 4vw;
-    height: 4vw;
+    width: 5vw;
+    height: 5vw;
     max-width: 6vw;
     max-height: 6vw;
   }
