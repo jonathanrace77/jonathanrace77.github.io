@@ -63,7 +63,7 @@ body {
   width: 70vw;
   margin: 10px;
   z-index: 15;
-  left: 0px;
+  left: 4vw;
 }
 /* the above is all useful CSS */
 #navcontents {
@@ -175,7 +175,7 @@ div.a {
 }
 
 #skills-left {
-  margin: 14vh 10px 14vh 10px;
+  margin: 14vh 10px 14vh 4vw;
   height: 75vh;
   display: block;
 }
@@ -352,30 +352,47 @@ img {
 }
 
 #name{
-  width: 230px;
-  padding: 0px;
+  width: 260px;
+  padding: 10px;
   margin: 2px;
+  height: 10px;
+  border-radius: 3px;
+  border-style: none;
+  background: #EEE;
+  border-width: 1px;
 }
 
 #email{
-  width: 230px;
-  padding: 0px;
+  width: 260px;
+  padding: 10px;
   margin: 2px;
+  height: 10px;
+  border-radius: 3px;
+  border-style: none;
+  background: #EEE;
+  border-width: 1px;
 }
 
 #message{
-  width: 230px;
+  width: 260px;
   vertical-align: top;
-  padding: 0px 0px 80px 0px;
+  padding: 10px 10px 80px 10px;
   margin: 2px;
+  height: 10px;
+  border-radius: 3px;
+  border-style: none;
+  background: #EEE;
+  border-width: 1px;
 }
 
 #submit-button{
   color: #FFF;
   background: #5AD07D;
   width: 100px;
-  height: 25px;
+  height: 30px;
   margin: 5px;
+  border-radius: 3px;
+  border-style: none;
 }
 
 #link-pictures-container{
@@ -390,7 +407,7 @@ img {
   align-items: center;
   justify-content: space-between;
   margin-top: 0px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 #link-pictures img{
@@ -574,5 +591,27 @@ img {
     max-height: 100%;
     grid-row: 2;
     justify-content: space-between;
+  }
+
+  #link-pictures img{
+    width: 20px;
+    height: auto;
+  }
+
+  #link-pictures{
+    display: flex;
+    width: 300px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+  
+  #copyright{
+    text-align: center;
+    font-weight: 100;
+    font-size: 12px;
+    color: #FFF;
+    padding-bottom: 5px;
   }
 }

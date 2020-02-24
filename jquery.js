@@ -19,11 +19,9 @@ function mobileMenu() {
     $("#navbar").animate({"left": "50vw"}, 300);
     $("#navcontents").css("opacity", "1");
     $("#navbar").css("opacity", "0.9");
+    setMenuColor();
   } else {
     x.className = "topnav";
-    /*document.getElementById("navbar").style.display = "none";
-    /*$("#navbar").css("opacity", "0");
-    $("#navcontents").css("opacity", "0");*/
     $("#navbar").animate({"left": "100vw"}, 300);
   }
 }
@@ -33,7 +31,8 @@ $(document).ready(function() {
   $("li").on("click", function() {
     if (document.getElementById("navcontents").className != "topnav") {
       document.getElementById("navcontents").className = "topnav";
-      document.getElementById("navbar").style.display = "none";
+      $("#navbar").animate({"left": "100vw"}, 100);
+      //document.getElementById("navbar").style.display = "none";
     }
   });
 });
@@ -43,8 +42,8 @@ $(window).on("resize", function(event) {
   if (windowSize > 600) {
     document.getElementById("navbar").style.display = "block";
     document.getElementById("navcontents").className = "topnav";
-    $("li a").css("color", "#FFF");
-    $("#navbar").css("left", "0px");
+    setMenuColor();
+    $("#navbar").css("left", "4vw");
   } else if (windowSize <= 600) {
     document.getElementById("navbar").style.display = "none";
     $("#navbar").css("left", "100vw");
@@ -53,16 +52,19 @@ $(window).on("resize", function(event) {
 
 //Set menu colours (based on screen position)
 $(window).scroll(function() {
+  setMenuColor();
+});
+
+let setMenuColor = () => {
   if (
     $(document).scrollTop() / $(window).height() > 1 - 0.03 &&
     $(window).width() > 600
   ) {
-    console.log('Im changing color');
     $("li a").css("color", "#5C5757");
   } else {
     $("li a").css("color", "#FFF");
   }
-});
+}
 
 //Set menu hover colours
 $(document).ready(function() {
