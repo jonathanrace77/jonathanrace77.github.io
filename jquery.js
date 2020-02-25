@@ -31,7 +31,7 @@ $(document).ready(function() {
   $("li").on("click", function() {
     if (document.getElementById("navcontents").className != "topnav") {
       document.getElementById("navcontents").className = "topnav";
-      $("#navbar").animate({"left": "100vw"}, 100);
+      $("#navbar").css("left", "100vw");
       //document.getElementById("navbar").style.display = "none";
     }
   });
@@ -109,3 +109,8 @@ function bounce($elem) {
     else $elem.stop();
   });
 }
+
+//Stars video speed
+$(document.getElementById("stars-video")).ready(function() {
+  document.getElementById("stars-video").playbackRate = 0.5;
+});
