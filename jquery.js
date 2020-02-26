@@ -1,14 +1,13 @@
+let skillsMoveTriggered = 0;
+
+//Fade in text in welcome section
 $(document).ready(function() {
-  $("h1")
-    .hide()
-    .fadeIn(2500);
-  $("p")
-    .hide()
-    .fadeIn(4000);
+  $("h1").animate({"opacity": "1"}, 2000);
+  $("p").animate({"opacity": "1"}, 3000);
 });
 
 $(document).ready(function() {
-  $("#navbar").animate({ top: "0px" }, 800);
+  $("#navbar").animate({ top: "0px" }, 3000);
 });
 
 function mobileMenu() {
@@ -114,3 +113,31 @@ function bounce($elem) {
 $(document.getElementById("stars-video")).ready(function() {
   document.getElementById("stars-video").playbackRate = 0.5;
 });
+
+
+
+//On screen load (Skills text)
+$(window).scroll(function() {
+  if(!skillsMoveTriggered){
+  var top_of_element = $("#skills-container").offset().top;
+  var bottom_of_element = $("#skills-container").offset().top + $("#skills-container").outerHeight();
+  var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+  var top_of_screen = $(window).scrollTop();
+
+  if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
+console.log('Is visible');
+
+
+
+  console.log(skillsMoveTriggered);
+  $("#skills-left").animate({"margin-left": "4vw"}, 2000);
+  skillsMoveTriggered = 1;
+  console.log('Skills Move Triggered');
+}
+
+  } /*else {
+    console.log('Is not visible');
+$("#skills-left").animate({"margin-left": "-40vw"}, 2000);
+  }*/
+});
+
