@@ -18,12 +18,16 @@ function mobileMenu() {
     $("#navbar").animate({"left": "50vw"}, 300);
     $("#navcontents").css("opacity", "1");
     $("#navbar").css("opacity", "0.9");
+    $("body").css({"position": "sticky", "overflow": "hidden"});
     setMenuColor();
   } else {
     x.className = "topnav";
     $("#navbar").animate({"left": "100vw"}, 300);
+    $("body").css({"position": "static", "overflow": "auto"});
+
   }
 }
+
 
 //Mobile link clicked -> close menu
 $(document).ready(function() {

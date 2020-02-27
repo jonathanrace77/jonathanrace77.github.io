@@ -492,8 +492,8 @@ img {
     margin: 0px;
     width: 50vw;
     left: 100vw;
-
   }
+
 
 /*****************************************************/
   ul {
@@ -628,4 +628,10 @@ img {
     color: #FFF;
     padding-bottom: 5px;
   }
+
+ body {
+  position: static;
+  overflow: auto;
+  height: 100%;
+}
 }
