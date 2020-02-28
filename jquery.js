@@ -1,5 +1,3 @@
-let skillsMoveTriggered = 0;
-
 //Fade in text in welcome section
 $(document).ready(function() {
   $("h1").animate({"opacity": "1"}, 2000);
@@ -28,7 +26,6 @@ function mobileMenu() {
   }
 }
 
-
 //Mobile link clicked -> close menu
 $(document).ready(function() {
   $("li").on("click", function() {
@@ -42,12 +39,12 @@ $(document).ready(function() {
 
 $(window).on("resize", function(event) {
   var windowSize = $(window).width(); // Could've done $(this).width()
-  if (windowSize > 600) {
+  if (windowSize > 800) {
     document.getElementById("navbar").style.display = "block";
     document.getElementById("navcontents").className = "topnav";
     setMenuColor();
     $("#navbar").css("left", "4vw");
-  } else if (windowSize <= 600) {
+  } else if (windowSize <= 800) {
     document.getElementById("navbar").style.display = "none";
     $("#navbar").css("left", "100vw");
   }
@@ -61,7 +58,7 @@ $(window).scroll(function() {
 let setMenuColor = () => {
   if (
     $(document).scrollTop() / $(window).height() > 1 - 0.03 &&
-    $(window).width() > 600
+    $(window).width() > 800
   ) {
     $("li a").css("color", "#5C5757");
   } else {
@@ -75,7 +72,7 @@ $(document).ready(function() {
     function() {
       if (
         $(document).scrollTop() / $(window).height() > 1 - 0.03 &&
-        $(window).width() > 600
+        $(window).width() > 800
       ) {
         $(this).css("color", "#464646");
       } else {
@@ -85,7 +82,7 @@ $(document).ready(function() {
     function() {
       if (
         $(document).scrollTop() / $(window).height() > 1 - 0.03 &&
-        $(window).width() > 600
+        $(window).width() > 800
       ) {
         $(this).css("color", "#464646");
       } else {
@@ -120,28 +117,21 @@ $(document.getElementById("stars-video")).ready(function() {
 
 
 
+
+
 //On screen load (Skills text)
-$(window).scroll(function() {
-  if(!skillsMoveTriggered){
-  var top_of_element = $("#skills-container").offset().top;
-  var bottom_of_element = $("#skills-container").offset().top + $("#skills-container").outerHeight();
-  var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
-  var top_of_screen = $(window).scrollTop();
+$(window).on('scroll',function() {
+  var hT = $('#skills-left').offset().top,
+      hH = $('#skills-left').outerHeight(),
+      wH = $(window).height(),
+      wS = $(this).scrollTop();
 
-  if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
-console.log('Is visible');
-
-
-
-  console.log(skillsMoveTriggered);
-  $("#skills-left").animate({"margin-left": "4vw"}, 2000);
-  skillsMoveTriggered = 1;
-  console.log('Skills Move Triggered');
-}
-
-  } /*else {
-    console.log('Is not visible');
-$("#skills-left").animate({"margin-left": "-40vw"}, 2000);
-  }*/
+  if (wS > ((hT+hH-wH)-500)){
+      $(window).off('scroll');
+      skillsLeftMove();      
+  }
 });
 
+let skillsLeftMove = () => {
+  $("#skills-left").animate({"margin-left": "4vw"}, 1000);
+}
