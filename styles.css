@@ -561,8 +561,8 @@ img {
   #skills > div > div img {
     width: 10vw;
     height: 10vw;
-    max-width: 12vw;
-    max-height: 12vw;
+    max-width: 60px;
+    max-height: 60px;
   }
 
   #skills-container {
