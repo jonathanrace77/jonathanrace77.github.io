@@ -37,6 +37,7 @@ $(document).ready(function() {
   });
 });
 
+//Change Menu style on resize
 $(window).on("resize", function(event) {
   var windowSize = $(window).width(); // Could've done $(this).width()
   if (windowSize > 800) {
@@ -54,6 +55,7 @@ $(window).on("resize", function(event) {
 $(window).scroll(function() {
   setMenuColor();
 });
+
 
 let setMenuColor = () => {
   if (
@@ -117,7 +119,7 @@ $(document.getElementById("stars-video")).ready(function() {
 
 
 
-
+/*
 
 //On screen load (Skills text)
 $(window).on('scroll',function() {
@@ -130,8 +132,13 @@ $(window).on('scroll',function() {
       $(window).off('scroll');
       skillsLeftMove();      
   }
+  console.log('Success');
+  setMenuColor();
 });
+
 
 let skillsLeftMove = () => {
   $("#skills-left").animate({"margin-left": "4vw"}, 1000);
 }
+
+*/

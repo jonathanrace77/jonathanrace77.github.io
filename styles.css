@@ -180,7 +180,7 @@ div.a {
   margin: 14vh 10px 14vh 4vw;
   height: 75vh;
   display: block;
-  margin-left: -40vw;
+  /*margin-left: -40vw;*/
 }
 
 #skills-left h2 {
