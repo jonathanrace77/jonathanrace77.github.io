@@ -15,13 +15,14 @@ body {
 }
 
 h1 {
-  color: #fff;
+  color: #FFF;
   font-size: 6vh;
   font-weight: 500;
   opacity: 0;
 }
 
 h2 {
+  color: #000;
   font-size: 5.5vh;
   font-weight: 500;
 }
@@ -49,6 +50,8 @@ b {
   z-index: 15;
   left: 4vw;
 }
+
+/* Code above here is good!*/
 
 #navcontents {
   display: flex;
