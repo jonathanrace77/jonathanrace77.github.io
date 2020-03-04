@@ -7,57 +7,37 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 
-b {
-  color: #000;
-}
-
-.animate {
-  transform: translate(54vw, 0px);
-  -webkit-transform: translate(54vw, 0px);
-}
-
-@keyframes bounce-effect {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(5px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-.moving-arrow {
-  display: inline-block;
-  animation-name: bounce-effect;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-}
-#video-container {
-  position: absolute;
-  z-index: -500;
-  background-color: #000;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  display: block;
-}
-
-#stars-video {
-  background-color: #000;
-}
-
-section {
-  height: 100vh;
-  scroll-snap-align: start;
-  position: relative;
-}
-
 body {
   font-family: "Montserrat";
   background: #000;
   margin-right: 0px;
   margin-left: 0px;
+}
+
+h1 {
+  color: #fff;
+  font-size: 6vh;
+  font-weight: 500;
+  opacity: 0;
+}
+
+h2 {
+  font-size: 5.5vh;
+  font-weight: 500;
+}
+
+p {
+  color: #5a5a5a;
+  font-size: 1.9vh;
+  opacity: 0;
+  font-weight: 100;
+}
+
+b {
+  color: #000;
+  font-size: 2vh;
+  font-weight: 900;
+  line-height: 1.4;
 }
 
 #navbar {
@@ -69,7 +49,7 @@ body {
   z-index: 15;
   left: 4vw;
 }
-/* the above is all useful CSS */
+
 #navcontents {
   display: flex;
   flex-direction: row;
@@ -99,21 +79,25 @@ li a:hover {
   text-decoration: underline;
   color: #bacee0;
 }
-h1 {
-  color: #fff;
-  font-size: 6vh;
-  font-weight: 500;
-  opacity: 0;
+
+#video-container {
+  position: absolute;
+  z-index: -500;
+  background-color: #000;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: block;
 }
-h2 {
-  color: #000;
-  font-size: 5.5vh;
-  font-weight: 500;
+
+#stars-video {
+  background-color: #000;
 }
-p {
-  color: #5c5757;
-  font-size: 2vh;
-  opacity: 0;
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
 }
 
 #welcome-section {
@@ -335,9 +319,6 @@ footer {
   grid-template-rows: 15vh 80vh;
 }
 
-.flex-container > div > p {
-  color: #5a5a5a;
-}
 .flex-container > div > h2 {
   color: #333;
 }
@@ -463,16 +444,6 @@ img {
     z-index: 120;
   }
   /*****************************************************/
-  #navbar {
-    display: block;
-    position: fixed;
-    top: -50px;
-    width: 70vw;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-    margin: 10px;
-  }
   #navcontents {
     display: flex;
     flex-direction: row;
@@ -636,4 +607,35 @@ img {
     overflow: auto;
     height: 100%;
   }
+}
+
+@media only screen and (max-height: 500px) {
+  #skills > div > div img {
+    width: 5vh;
+    height: 5vh;
+  }
+}
+
+/* Animations */
+.animate {
+  transform: translate(54vw, 0px);
+  -webkit-transform: translate(54vw, 0px);
+}
+
+@keyframes bounce-effect {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.moving-arrow {
+  display: inline-block;
+  animation-name: bounce-effect;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
