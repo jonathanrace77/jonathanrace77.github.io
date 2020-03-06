@@ -326,9 +326,9 @@ footer {
   color: #333;
 }
 img {
-  width: 14vw;
+  width: 21.75vw;
   height: 14vw;
-  max-width: 150px;
+  max-width: 233px;
   max-height: 150px;
 }
 
@@ -435,7 +435,7 @@ img {
   }
 
   .flex-container2 > div img {
-    height: 22vh;
+    height: 25.7vw;
     width: auto;
   }
 
@@ -612,7 +612,7 @@ img {
   }
 }
 
-@media only screen and (max-height: 500px) {
+@media only screen and (max-height: 550px) {
   #skills > div > div img {
     width: 5vh;
     height: 5vh;
@@ -641,4 +641,11 @@ img {
   animation-name: bounce-effect;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+}
+
+@media only screen and (max-width: 425px) {
+  .flex-container2 > div img {
+    height: 16.7vh;
+    width: auto;
+  }
 }
