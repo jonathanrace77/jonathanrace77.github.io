@@ -61,6 +61,8 @@ $(window).scroll(function() {
   setMenuColor();
 });
 
+let skillsShown = 0;
+
 //Set menu colours Function
 let setMenuColor = () => {
   if (
@@ -68,8 +70,85 @@ let setMenuColor = () => {
     $(window).width() > 800
   ) {
     $("li a").css("color", "#5C5757");
+    //Skills animate section
     if (!$("#skills-left").hasClass("animate")) {
       $("#skills-left").addClass("animate");
+    }
+
+    if (skillsShown === 0) {
+      let timeM = 100;
+
+      setTimeout(function() {
+        $("#skill-id-1").animate({ opacity: "1" }, 10 * timeM);
+        console.log("hey");
+      }, 1 * timeM);
+
+      setTimeout(function() {
+        $("#skill-id-2").animate({ opacity: "1" }, 10 * timeM);
+        console.log("hey");
+      }, 2 * timeM);
+
+      setTimeout(function() {
+        $("#skill-id-3").animate({ opacity: "1" }, 10 * timeM);
+        console.log("hey");
+      }, 3 * timeM);
+
+      setTimeout(function() {
+        $("#skill-id-4").animate({ opacity: "1" }, 10 * timeM);
+        console.log("hey");
+      }, 4 * timeM);
+
+      setTimeout(function() {
+        $("#skill-id-5").animate({ opacity: "1" }, 10 * timeM);
+        console.log("hey");
+      }, 5 * timeM);
+
+      setTimeout(function() {
+        $("#skill-id-6").animate({ opacity: "1" }, 10 * timeM);
+        console.log("hey");
+      }, 6 * timeM);
+
+      setTimeout(function() {
+        $("#skill-id-7").animate({ opacity: "1" }, 10 * timeM);
+        console.log("hey");
+      }, 7 * timeM);
+
+      setTimeout(function() {
+        $("#skill-id-8").animate({ opacity: "1" }, 10 * timeM);
+        console.log("hey");
+      }, 8 * timeM);
+
+      setTimeout(function() {
+        $("#skill-id-9").animate({ opacity: "1" }, 10 * timeM);
+        console.log("hey");
+      }, 9 * timeM);
+
+      setTimeout(function() {
+        $("#skill-id-10").animate({ opacity: "1" }, 10 * timeM);
+        console.log("hey");
+      }, 10 * timeM);
+
+      setTimeout(function() {
+        $("#skill-id-11").animate({ opacity: "1" }, 10 * timeM);
+        console.log("hey");
+      }, 11 * timeM);
+
+      setTimeout(function() {
+        $("#skill-id-12").animate({ opacity: "1" }, 10 * timeM);
+        console.log("hey");
+      }, 12 * timeM);
+
+      /*
+      let i = 1;
+      let skillsTime;
+      while(i < 12){
+        console.log(i);
+        skillsTime = [i] * 1500;
+      i++;
+    }
+*/
+
+      skillsShown = 1;
     }
   } else {
     $("li a").css("color", "#FFF");
