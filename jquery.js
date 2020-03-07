@@ -76,7 +76,7 @@ let setMenuColor = () => {
     }
 
     if (skillsShown === 0) {
-      let timeM = 100;
+      let timeM = 70;
 
       setTimeout(function() {
         $("#skill-id-1").animate({ opacity: "1" }, 10 * timeM);
