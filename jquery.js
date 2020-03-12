@@ -20,10 +20,10 @@ function mobileMenu() {
   if (x.className === "topnav") {
     x.className += " responsive";
     document.getElementById("navbar").style.display = "block";
-    $("#navbar").animate({ left: "50vw" }, 300);
+    $("#navbar").animate({ left: "0vw" }, 300);
     $("#navcontents").css("opacity", "1");
-    $("#navbar").css("opacity", "0.9");
-    $("body").css({ position: "sticky", overflow: "hidden" });
+    $("#navbar").css("opacity", "1");
+    //$("body").css({ position: "sticky", overflow: "hidden" });
     setMenuColor();
   } else {
     x.className = "topnav";
