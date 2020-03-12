@@ -1,0 +1,19 @@
+@media only screen and (max-height: 350px) {
+  #name {
+    margin: 1px;
+    height: 5px;
+  }
+  #email {
+    margin: 1px;
+    height: 5px;
+  }
+  #message {
+    margin: 1px;
+    height: 5px;
+  }
+  #submit-button {
+    margin: 1px;
+    height: 20px;
+  }
+}
+/*# sourceMappingURL=media-max-height-350.css.map */

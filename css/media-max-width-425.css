@@ -1,0 +1,7 @@
+@media only screen and (max-width: 425px) {
+  .flex-container2 > div img {
+    height: 16.7vh;
+    width: auto;
+  }
+}
+/*# sourceMappingURL=media-max-width-425.css.map */

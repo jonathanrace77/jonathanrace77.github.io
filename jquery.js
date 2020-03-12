@@ -16,6 +16,7 @@ $(document).ready(function() {
 
 //Mobile menu clicked
 function mobileMenu() {
+
   var x = document.getElementById("navcontents");
   if (x.className === "topnav") {
     x.className += " responsive";
@@ -34,10 +35,13 @@ function mobileMenu() {
 
 //Mobile link clicked -> close menu
 $(document).ready(function() {
+  
   $("li").on("click", function() {
+    
     if (document.getElementById("navcontents").className != "topnav") {
       document.getElementById("navcontents").className = "topnav";
       $("#navbar").css("left", "100vw");
+      
     }
   });
 });
@@ -57,6 +61,7 @@ $(window).on("resize", function(event) {
 });
 
 //Set menu colours (based on screen position)
+
 $(window).scroll(function() {
   setMenuColor();
 });
@@ -66,9 +71,11 @@ let skillsShown = 0;
 //Set menu colours Function
 let setMenuColor = () => {
   if (
-    $(document).scrollTop() / $(window).height() > 1 - 0.03 &&
-    $(window).width() > 800
-  ) {
+    $(document).scrollTop() / $(window).height() > 1 - 0.03
+  && $(window).width() > 800) {
+  
+   
+
     $("li a").css("color", "#5C5757");
     //Skills animate section
     if (!$("#skills-left").hasClass("animate")) {
