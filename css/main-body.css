@@ -197,7 +197,6 @@ div.a {
   height: 75vh;
   display: block;
   margin-left: -50vw;
-  /*-webkit-transform: translate(-50vw, 0px);*/
   transition: -webkit-transform 0.6s ease-in-out;
   -webkit-transition: -webkit-transform 0.6s ease-in-out;
 }
@@ -255,7 +254,7 @@ div.a {
   height: 75vh;
 }
 
-.flex-container {
+.skills-container-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,7 +277,7 @@ div.a {
           justify-content: space-between;
 }
 
-.flex-container > div {
+.skills-container-inner > div {
   width: auto;
   margin: 0px;
   text-align: center;
@@ -290,6 +289,10 @@ div.a {
 #skills > div > div img {
   width: 6vw;
   height: 6vw;
+}
+
+.skills-container-inner > div > h2 {
+  color: #333;
 }
 
 #down-arrow3 {
@@ -304,58 +307,7 @@ div.a {
   color: #fff;
 }
 
-#contact {
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: top;
-      -ms-flex-align: top;
-          align-items: top;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: #fff;
-  color: #000;
-  padding: 0 0;
-}
-
-#contact > div {
-  padding: 5vh;
-}
-
-#contact-form {
-  display: -ms-grid;
-  display: grid;
-  text-align: center;
-}
-
-#clip {
-  background: #5c5757;
-  height: 100px;
-  position: absolute;
-  left: 0px;
-  bottom: 10vh;
-  width: 100vw;
-  clip-path: polygon(0 100%, 0 50%, 50% 35%, 100% 50%, 100% 100%);
-  -webkit-clip-path: polygon(0 100%, 0 50%, 50% 35%, 100% 50%, 100% 100%);
-  z-index: 60;
-}
-
-footer {
-  position: absolute;
-  padding-bottom: 10px;
-  width: 100vw;
-  bottom: 0vh;
-  left: 0px;
-  display: block;
-  z-index: 70;
-  height: 12vh;
-  background: #5c5757;
-  border: none;
-}
-
-.flex-container2 {
+.portfolio-container-inner {
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -374,7 +326,7 @@ footer {
       grid-template-rows: 25vh 25vh 25vh;
 }
 
-.flex-container2 > div {
+.portfolio-container-inner > div {
   height: 100%;
   width: 100%;
   margin: auto;
@@ -382,7 +334,7 @@ footer {
   margin: 0px;
 }
 
-.flex-container2 > div img {
+.portfolio-container-inner > div img {
   height: 100%;
   width: auto;
   text-align: center;
@@ -438,12 +390,8 @@ footer {
           justify-content: center;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 15vh 80vh;
-      grid-template-rows: 15vh 80vh;
-}
-
-.flex-container > div > h2 {
-  color: #333;
+  -ms-grid-rows: 20vh 70vh;
+      grid-template-rows: 20vh 70vh;
 }
 
 img {
@@ -464,12 +412,62 @@ img:hover {
 
 #mobilemenubutton .icon {
   display: none;
-  color: #ccc;
 }
 
 #mobilemenubutton .icon a {
   display: none;
   color: #ccc;
+}
+
+#contact {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #fff;
+  color: #000;
+  padding: 0 0;
+}
+
+#contact > div {
+  padding: 5vh;
+}
+
+#contact-form {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+}
+
+#clip {
+  background: #5c5757;
+  height: 100px;
+  position: absolute;
+  left: 0px;
+  bottom: 10vh;
+  width: 100vw;
+  clip-path: polygon(0 100%, 0 50%, 50% 35%, 100% 50%, 100% 100%);
+  -webkit-clip-path: polygon(0 100%, 0 50%, 50% 35%, 100% 50%, 100% 100%);
+  z-index: 60;
+}
+
+footer {
+  position: absolute;
+  padding-bottom: 10px;
+  width: 100vw;
+  bottom: 0vh;
+  left: 0px;
+  display: block;
+  z-index: 70;
+  height: 12vh;
+  background: #5c5757;
+  border: none;
 }
 
 #name {

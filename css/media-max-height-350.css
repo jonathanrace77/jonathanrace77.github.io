@@ -1,4 +1,11 @@
 @media only screen and (max-height: 350px) {
+  #skills-text {
+    line-height: 1.3;
+    font-size: 0.5vh;
+  }
+  .portfolio-container-inner > div img {
+    height: 15.7vw;
+  }
   #name {
     margin: 1px;
     height: 5px;
