@@ -58,6 +58,7 @@ $(window).on("resize", function(event) {
 //Set menu colours (based on screen position)
 
 $(window).scroll(function() {
+  console.log('hey');
   setMenuColor();
 });
 
@@ -69,7 +70,6 @@ let setMenuColor = () => {
     $(document).scrollTop() / $(window).height() > 1 - 0.03 &&
     $(window).width() > 800
   ) {
-    
     $("li a").css("color", "#5C5757");
     //Skills animate section
     if (!$("#skills-left").hasClass("animate")) {

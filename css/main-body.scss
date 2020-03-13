@@ -1,18 +1,21 @@
 html {
-  overflow: scroll;
-  height: 100vh;
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y mandatory;
-  -webkit-overflow-scrolling: touch;
+
 }
 
 body {
   font-family: "Montserrat";
   background: #000;
-  margin-right: 0px;
-  margin-left: 0px;
+  margin: 0px;
   overflow-x: hidden;
+}
+
+#scroll-parent {
+  //overflow: scroll;
+  height: 100vh;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 h1 {
@@ -343,7 +346,6 @@ img:hover {
 
 #mobilemenubutton .icon {
   display: none;
-  
 }
 #mobilemenubutton .icon a {
   display: none;

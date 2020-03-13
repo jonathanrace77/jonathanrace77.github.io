@@ -1,5 +1,11 @@
-html {
-  overflow: scroll;
+body {
+  font-family: "Montserrat";
+  background: #000;
+  margin: 0px;
+  overflow-x: hidden;
+}
+
+#scroll-parent {
   height: 100vh;
   -ms-scroll-snap-type: mandatory;
       scroll-snap-type: mandatory;
@@ -8,14 +14,6 @@ html {
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
-}
-
-body {
-  font-family: "Montserrat";
-  background: #000;
-  margin-right: 0px;
-  margin-left: 0px;
-  overflow-x: hidden;
 }
 
 h1 {
