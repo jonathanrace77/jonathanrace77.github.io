@@ -121,8 +121,6 @@ section {
 }
 
 #welcome-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: normal;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,8 +169,6 @@ div.a {
 
 /* Code above here is good!*/
 #skills {
-  scroll-snap-align: start;
-  scroll-snap-stop: normal;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -316,6 +312,22 @@ div.a {
   color: #fff;
 }
 
+#portfolio {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #fff;
+  color: #fff;
+  padding: 0 0;
+}
+
 .portfolio-container-inner {
   display: -ms-grid;
   display: grid;
@@ -347,22 +359,6 @@ div.a {
   height: 100%;
   width: auto;
   text-align: center;
-}
-
-#portfolio {
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: #fff;
-  color: #fff;
-  padding: 0 0;
 }
 
 #portfolio > div {
@@ -454,16 +450,37 @@ img:hover {
   text-align: center;
 }
 
-#clip {
-  background: #5c5757;
-  height: 100px;
-  position: absolute;
-  left: 0px;
-  bottom: 10vh;
+.tri-outer {
   width: 100vw;
-  clip-path: polygon(0 100%, 0 50%, 50% 35%, 100% 50%, 100% 100%);
-  -webkit-clip-path: polygon(0 100%, 0 50%, 50% 35%, 100% 50%, 100% 100%);
-  z-index: 60;
+  height: 100px;
+  background: none;
+  position: relative;
+  -webkit-transform: rotate(180deg) translate(0px, 59px);
+          transform: rotate(180deg) translate(0px, 59px);
+  display: block;
+}
+
+.tri-inner {
+  height: 100%;
+  width: 100%;
+  background-color: none;
+}
+
+.triangle-down {
+  height: 25%;
+  width: 100%;
+  position: relative;
+}
+
+.triangle-down svg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+svg .triangle-path {
+  fill: #5c5757;
 }
 
 footer {
@@ -548,7 +565,7 @@ footer {
 }
 
 #link-pictures img {
-  width: 30px;
+  width: 20px;
   height: auto;
 }
 
@@ -556,6 +573,14 @@ footer {
   text-align: center;
   font-weight: 100;
   font-size: 14px;
+  color: #fff;
+  padding-bottom: 5px;
+}
+
+#copyright {
+  text-align: center;
+  font-weight: 100;
+  font-size: 12px;
   color: #fff;
   padding-bottom: 5px;
 }
@@ -795,14 +820,13 @@ footer {
     width: 15px;
   }
   footer {
-    padding-bottom: 4vh;
-    height: 8vh;
-    min-height: 30px;
+    padding-bottom: 0vh;
+    padding-top: 2vh;
+    height: 10vh;
+    min-height: 35px;
   }
-  #clip {
-    height: 15vh;
-    bottom: 6vh;
-    min-height: 60px;
+  .tri-outer {
+    display: none;
   }
   #copyright {
     font-size: 10px;

@@ -28,7 +28,7 @@ $(document).ready(function() {
   $("li a").hover(
     function() {
       if (
-        $(document).scrollTop() / $(window).height() > 1 - 0.03 &&
+        $("#snap-container").scrollTop() / $(window).height() > 1 - 0.03 &&
         $(window).width() > 800
       ) {
         $(this).css("color", "#464646");
@@ -38,7 +38,7 @@ $(document).ready(function() {
     },
     function() {
       if (
-        $(document).scrollTop() / $(window).height() > 1 - 0.03 &&
+        $("#snap-container").scrollTop() / $(window).height() > 1 - 0.03 &&
         $(window).width() > 800
       ) {
         $(this).css("color", "#464646");

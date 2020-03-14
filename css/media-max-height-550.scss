@@ -17,15 +17,14 @@
   }
 
   footer {
-    padding-bottom: 4vh;
-    height: 8vh;
-    min-height: 30px;
+    padding-bottom:0vh;
+    padding-top:2vh;
+    height: 10vh;
+    min-height: 35px;
   }
 
-  #clip {
-    height: 15vh;
-    bottom: 6vh;
-    min-height: 60px;
+  .tri-outer{
+    display: none;
   }
 
   #copyright {
