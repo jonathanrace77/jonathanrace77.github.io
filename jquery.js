@@ -3,15 +3,50 @@ $(document.getElementById("stars-video")).ready(function() {
   document.getElementById("stars-video").playbackRate = 0.5;
 });
 
-//Fade in text in welcome section
 $(document).ready(function() {
+  //Fade in text in welcome section
   $("h1").animate({ opacity: "1" }, 2000);
   $("p").animate({ opacity: "1" }, 3000);
-});
 
-//Animate menu bar to slide down
-$(document).ready(function() {
+  //Animate menu bar to slide down
   $("#navbar").animate({ top: "0px" }, 3000);
+
+  //Mobile link clicked -> close menu
+  $("li").on("click", function() {
+    if (document.getElementById("navcontents").className != "topnav") {
+      document.getElementById("navcontents").className = "topnav";
+      $("#navbar").css("left", "100vw");
+    }
+  });
+
+  //Set menu colours (based on screen position)
+  $("#snap-container").scroll(function() {
+    setMenuColor();
+  });
+
+  //Set menu hover colours
+  $("li a").hover(
+    function() {
+      if (
+        $(document).scrollTop() / $(window).height() > 1 - 0.03 &&
+        $(window).width() > 800
+      ) {
+        $(this).css("color", "#464646");
+      } else {
+        $(this).css("color", "#BACEE0");
+      }
+    },
+    function() {
+      if (
+        $(document).scrollTop() / $(window).height() > 1 - 0.03 &&
+        $(window).width() > 800
+      ) {
+        $(this).css("color", "#464646");
+      } else {
+        $(this).css("color", "#FFF");
+      }
+    }
+  );
 });
 
 //Mobile menu clicked
@@ -31,16 +66,6 @@ function mobileMenu() {
   }
 }
 
-//Mobile link clicked -> close menu
-$(document).ready(function() {
-  $("li").on("click", function() {
-    if (document.getElementById("navcontents").className != "topnav") {
-      document.getElementById("navcontents").className = "topnav";
-      $("#navbar").css("left", "100vw");
-    }
-  });
-});
-
 //Change Menu style on resize
 $(window).on("resize", function(event) {
   var windowSize = $(window).width(); // Could've done $(this).width()
@@ -55,19 +80,12 @@ $(window).on("resize", function(event) {
   }
 });
 
-//Set menu colours (based on screen position)
-
-$(window).scroll(function() {
-  console.log('hey');
-  setMenuColor();
-});
-
 let skillsShown = 0;
 
 //Set menu colours Function
 let setMenuColor = () => {
   if (
-    $(document).scrollTop() / $(window).height() > 1 - 0.03 &&
+    $("#snap-container").scrollTop() / $(window).height() > 1 - 0.03 &&
     $(window).width() > 800
   ) {
     $("li a").css("color", "#5C5757");
@@ -133,32 +151,6 @@ let setMenuColor = () => {
     $("li a").css("color", "#FFF");
   }
 };
-
-//Set menu hover colours
-$(document).ready(function() {
-  $("li a").hover(
-    function() {
-      if (
-        $(document).scrollTop() / $(window).height() > 1 - 0.03 &&
-        $(window).width() > 800
-      ) {
-        $(this).css("color", "#464646");
-      } else {
-        $(this).css("color", "#BACEE0");
-      }
-    },
-    function() {
-      if (
-        $(document).scrollTop() / $(window).height() > 1 - 0.03 &&
-        $(window).width() > 800
-      ) {
-        $(this).css("color", "#464646");
-      } else {
-        $(this).css("color", "#FFF");
-      }
-    }
-  );
-});
 
 //Bouncing arrow icon
 $("img").hover(

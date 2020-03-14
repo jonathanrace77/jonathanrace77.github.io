@@ -1,5 +1,5 @@
 html {
-
+  overflow: none;
 }
 
 body {
@@ -7,15 +7,18 @@ body {
   background: #000;
   margin: 0px;
   overflow-x: hidden;
+  overflow: none;
 }
 
-#scroll-parent {
-  //overflow: scroll;
+#snap-container {
+  overflow: scroll;
   height: 100vh;
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
+}
+
+#snap-container > section {
+  scroll-snap-align: center;
 }
 
 h1 {
@@ -49,9 +52,9 @@ b {
   position: fixed;
   top: -50px;
   width: 70vw;
-  margin: 10px;
+  margin: 1vw;
   z-index: 15;
-  left: 4vw;
+  left: 3vw;
 }
 
 #navcontents {
@@ -109,6 +112,8 @@ section {
 }
 
 #welcome-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,6 +154,8 @@ div.a {
 /* Code above here is good!*/
 
 #skills {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
   height: 100vh;
   display: flex;
   background: #fff;
