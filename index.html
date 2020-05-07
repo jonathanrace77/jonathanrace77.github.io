@@ -1,37 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="jquery-3.4.1.min.js"></script>
-  <script src="jquery.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick-theme.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
+  <script src="https://www.vantajs.com/dist/vanta.net.min.js"></script>
+
   <title>Jonathan Race - Web Portfolio</title>
 </head>
+
 <body>
   <nav id="navbar">
-    <div id="navcontents" class="topnav">
-      <ul>
-        <li class="link">
-          <a href=#>Home</a>
-        </li>
-        <li class="link">
-          <a href=#skills>Skills</a>
-        </li>
-        <li class="link">
-          <a href=#portfolio>Portfolio</a>
-        </li>
-        <li class="link">
-          <a href=#contact>Contact</a>
-        </li>
-
-      </ul>
-
+    <div id="nav-outer">
+      <div id="navcontents" class="topnav">
+        <ul>
+          <li class="logo link">
+            <a href=#><img id="logo" src="img/logo_white.png"></a>
+          </li>
+          <li class="link">
+            <a href=#about-top>About</a>
+          </li>
+          <li class="link">
+            <a href=#skills-top>Skills</a>
+          </li>
+          <li class="link">
+            <a href=#portfolio-top>Portfolio</a>
+          </li>
+          <li class="link">
+            <a href=#contact-top>Contact</a>
+          </li>
+        </ul>
+        <div id="social-container">
+          <ul>
+            <li class="link">
+              <a href="https://www.linkedin.com/in/jonathanrace1/" targert = "_blank"><img id="logo" src="img/linkedin.png"></a>
+            </li>
+            <li class="link">
+              <a href="https://codepen.io/jonathan-race" targert = "_blank"><img id="logo" src="img/codepen.png"></a>
+            </li>
+            <li class="link">
+              <a href="https://github.com/jonathanrace77" targert = "_blank"><img id="logo" src="img/github.png"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-
+    <div class="colour-border"></div>
   </nav>
+
 
   <div id="mobilemenubutton">
     <a href="javascript:void(0);" class="icon" onclick="mobileMenu()">
@@ -40,220 +61,208 @@
   </div>
 
   <main>
-    <div id="snap-container">
 
     <section id="welcome-section">
-      <div id="overlay"></div>
-      <div id="video-container">
-      <video playsinline autoplay muted loop id="stars-video">
-        <source src="vid/stars.mp4" type="video/mp4">
-      </video>
-    </div>
-      <div align="center">
-        <div class="a">
-          <h1>Jonathan Race</h1>
+      <div id="welcome-background">
+        <div id="intro-message">
+          <h1><span class="line">Hi, I'm <b>Jonathan</b></span></h1>
+          <h1><span class="line">I’m a&nbsp</span><span class="line highlight-text">Front-End Web Developer</span></h1>
         </div>
-        <div class="b">
-          <p>Web Developer</p>
-        </div>
-      </div>
-      <div id="down-arrow1" class="moving-arrow">
-        <a href="#skills" class="icon">
-          <i class="fas fa-caret-down fa-2x bounce"></i>
-        </a>
       </div>
     </section>
 
-    <section id="skills">
-      <div id="skills-container">
-      <div align="left" id="skills-left">
-        <h2>Skills</h2>
-        <div id="skills-text">
-        <p>My main focus is on 
-          Front-end web development
-          with a passion for building websites that are:
-          <br><br>
-          <b>Fast</b> - keep loading times to a minimum<br>
-          <b>Fully Responsive</b> - will work on any device and browser size<br>
-          <b>Intuitive</b> - provide a good user experience<br>
-          <b>Dynamic</b> - make websites pop with movement<br>
-          <br>
-          The skills listed are my main 
-          proficiencies, but I am happy to adapt 
-          to new technologies in order to get the best result for the project.</p>
+    <section id="about">
+      <div id="about-container">
+        <div id="about-card"><a class="anchor" id="about-top"></a>
+          <div>
+            <h2>About</h3>
+          </div>
+          <div>
+            <h3>Jonathan Race</h3>
+          </div>
+          <div id="about-pic"><img id="profile-pic" src="img/jonathan-profile-pic.jpg"></div>
+          <div id="about-text">I am excited to continually build upon my web development skills and discover more ways
+            to
+            design websites and user experiences in creative and innovative ways.
+            <br><br>
+            I believe the best route to mastering a skill balances equal parts "classroom knowledge" and real-world
+            experience. Throughout my journey of web development I've endeavored to maintain this balance and enrich my
+            clients' projects while building my own ability along the way. </div>
+          <div id="about-download-cv"><a href="Jonathan_Race_CV.pdf" target="_blank"><img id="pdf-logo"
+                src="img/pdf-logo.png"></a><a href="Jonathan_Race_CV.pdf" target="_blank">
+              <p id="pdf-download-text"><b>Download my CV</b></p>
+            </a></div>
+        </div>
+
+        <div id="skills-card"><a class="anchor" id="skills-top"></a>
+          <div>
+            <h2>Skills</h3>
+          </div>
+          <div id="skills-card-inner">
+            <!--<div id="skills-card-text"><p>My main focus is on Front-end web development with a passion for building websites that are:
+          <ul>
+            <li><b>Fast</b> - keep loading times to a minimum</li>
+          <li><b>Fully Responsive</b> - will work on any device and browser size</li>
+          <li><b>Intuitive</b> - provide a good user experience</li>
+          <li><b>Dynamic</b> - make websites pop with movement</li>
+          </ul>
+            The skills listed are my main proficiencies, but I am happy to adapt to new technologies in order to get the best result for the project.</p></div>-->
+            <div id="skills-card-badges">
+              <div class="skills-container-inner">
+                <div align="center" id="skill-id-1">
+                  <img src="img/html5.png">
+                  <caption>
+                    <p>HTML5</p>
+                  </caption>
+                </div>
+                <div align="center" id="skill-id-2">
+                  <img src="img/css3.png">
+                  <caption>
+                    <p>CSS3</p>
+                  </caption>
+                </div>
+                <div align="center" id="skill-id-3">
+                  <img src="img/PHP7.png">
+                  <caption>
+                    <p>PHP7</p>
+                  </caption>
+                </div>
+                <div align="center" id="skill-id-4">
+                  <img src="img/es6.png">
+                  <caption>
+                    <p>JavaScript</p>
+                  </caption>
+                </div>
+                <div align="center" id="skill-id-5">
+                  <img src="img/bootstrap.png">
+                  <caption>
+                    <p>Bootstrap</p>
+                  </caption>
+                </div>
+                <div align="center" id="skill-id-6">
+                  <img src="img/jquery.png">
+                  <caption>
+                    <p>jQuery</p>
+                  </caption>
+                </div>
+                <div align="center" id="skill-id-7">
+                  <img src="img/photoshop.png">
+                  <caption>
+                    <p>Photoshop</p>
+                  </caption>
+                </div>
+                <div align="center" id="skill-id-8">
+                  <img src="img/scss.png">
+                  <caption>
+                    <p>Sass</p>
+                  </caption>
+                </div>
+                <div align="center" id="skill-id-9">
+                  <img src="img/react.png">
+                  <caption>
+                    <p>React</p>
+                  </caption>
+                </div>
+                <div align="center" id="skill-id-10">
+                  <img src="img/redux.png">
+                  <caption>
+                    <p>Redux</p>
+                  </caption>
+                </div>
+                <div align="center" id="skill-id-11">
+                  <img src="img/sketch.png">
+                  <caption>
+                    <p>Sketch</p>
+                  </caption>
+                </div>
+                <div align="center" id="skill-id-12">
+                  <img src="img/d3.png">
+                  <caption>
+                    <p>D3</p>
+                  </caption>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      
-        <div align="center" id="skills-right">
-        <div class="skills-container-inner">
-          <div align="center" id="skill-id-1">
-            <img src="img/html5.png">
-            <caption>
-              <p>HTML5</p>
-            </caption>
-          </div>
-          <div align="center" id="skill-id-2">
-            <img src="img/css3.png">
-            <caption>
-              <p>CSS3</p>
-            </caption>
-          </div>
-          <div align="center" id="skill-id-3">
-            <img src="img/PHP7.png">
-            <caption>
-              <p>PHP7</p>
-            </caption>
-          </div>
-          <div align="center" id="skill-id-4">
-            <img src="img/es6.png">
-            <caption>
-              <p>JavaScript</p>
-            </caption>
-          </div>
-          <div align="center" id="skill-id-5">
-            <img src="img/bootstrap.png">
-            <caption>
-              <p>Bootstrap</p>
-            </caption>
-          </div>
-          <div align="center" id="skill-id-6">
-            <img src="img/jquery.png">
-            <caption>
-              <p>jQuery</p>
-            </caption>
-          </div>
-          <div align="center" id="skill-id-7">
-            <img src="img/photoshop.png">
-            <caption>
-              <p>Photoshop</p>
-            </caption>
-          </div>
-          <div align="center" id="skill-id-8">
-            <img src="img/scss.png">
-            <caption>
-              <p>Sass</p>
-            </caption>
-          </div>
-          <div align="center" id="skill-id-9">
-            <img src="img/react.png">
-            <caption>
-              <p>React</p>
-            </caption>
-          </div>
-          <div align="center" id="skill-id-10">
-            <img src="img/redux.png">
-            <caption>
-              <p>Redux</p>
-            </caption>
-          </div>
-          <div align="center" id="skill-id-11">
-            <img src="img/sketch.png">
-            <caption>
-              <p>Sketch</p>
-            </caption>
-          </div>
-          </div>
-        </div>
-        <div id="down-arrow2" class="moving-arrow">
-          <a href="#portfolio" class="icon">
-            <i class="fas fa-caret-down fa-2x bounce"></i>
-          </a>
-        </div>
-        </div>
-        
+      <div id="clip-path1">
+        <div id="clip-path-inner1"></div>
+      </div>
     </section>
 
     <section id="portfolio">
-      <div align="center" id="portfolio-container">
-        <div id="portfolio-container-project">
-          <div><h2>Portfolio</h2></div><div class="portfolio-container-inner">
-          <div align="center">
-            <a href="https://englishxp.co.uk" target="_blank"><img
-                src="/img/website1.jpg" class="project-tile"></a>
+      <div id="portfolio-card"><a class="anchor" id="portfolio-top"></a>
+        <div id="portfolio-title">
+          <h2>Portfolio</h2>
+        </div>
+        <div id="page">
+          <div class="row">
+            <div class="column small-11 small-centered">
+              <div class="slider slider-single">
+                <div><img src="/img/website1.jpg"></div>
+                <div><img src="/img/website2.jpg"></div>
+                <div><img src="/img/website3.jpg"></div>
+                <div><img src="/img/website4.jpg"></div>
+                <div><img src="/img/website5.jpg"></div>
+              </div>
+              <div class="slider slider-nav">
+                <div><img src="/img/website1.jpg"></div>
+                <div><img src="/img/website2.jpg"></div>
+                <div><img src="/img/website3.jpg"></div>
+                <div><img src="/img/website4.jpg"></div>
+                <div><img src="/img/website5.jpg"></div>
+              </div>
+            </div>
           </div>
-          <div align="center">
-            <a href="https://codepen.io/jonathan-race/full/yLymqwd" target="_blank"><img
-                src="/img/website2.jpg" class="project-tile"></a>
-          </div>
-          <div align="center">
-            <a href="https://codepen.io/jonathan-race/full/MWwoWNQ" target="_blank"><img
-                src="/img/website3.png" class="project-tile"></a>
-          </div>
-          <div align="center">
-            <a href="https://codepen.io/jonathan-race/full/dyoPbYJ" target="_blank"><img
-                src="/img/website4.jpg" class="project-tile"></a>
-          </div>
-          <div align="center">
-            <a href="https://codepen.io/jonathan-race/full/GRJKwyr" target="_blank"><img
-                src="/img/website5.png" class="project-tile"></a>
-          </div>
-          <div align="center">
-            <a href="https://codepen.io/jonathan-race/full/jOPyMWX" target="_blank"><img
-                src="/img/website6.png" class="project-tile"></a>
-          </div>
-        </div></div>
-        
-        <div id="down-arrow3" class="moving-arrow">
-          <a href="#contact" class="icon">
-            <i class="fas fa-caret-down fa-2x bounce"></i>
-          </a>
         </div>
       </div>
-
-      
+      <div id="clip-path2">
+        <div id="clip-path-inner2"></div>
+      </div>
     </section>
-    
+
 
     <section id="contact">
-      <div id="contact-container">
-      <div align="center">
-        <h2>Contact</h2>
-        <p>Any questions before we <b>start</b>?</p>
-      </div>
-      <div id="contact-form">
+      <div id="contact-container"><a class="anchor" id="contact-top"></a>
+        <div id="contact-text" align="center">
+          <div id="contact-title">
+            <h2>Contact</h2>
+          </div>
+          <p>Any questions before we <b>start</b>?</p>
+        </div>
+        <div id="contact-form">
 
-
-
-        <form action="https://usebasin.com/f/e981dacb641c" method="POST" id="form">
-          <label for="name"></label>
-          <input type="text" id="name" name="name" placeholder="Name" required><br>
-          <label for="email-address"></label>
-          <input type="email" id="email" name="email" placeholder="Email" required><br>
-          <label for="message"></label>
-          <input type="text" id="message" name="message" placeholder="Message" required><br>
-          <button type="submit" id="submit-button">Submit</button>
+          <form action="https://usebasin.com/f/e981dacb641c" method="POST" id="form">
+            <label for="name"></label>
+            <input type="text" id="name" name="name" placeholder="Name" required><br>
+            <label for="email-address"></label>
+            <input type="email" id="email" name="email" placeholder="Email" required><br>
+            <label for="message"></label>
+            <input type="text" id="message" name="message" placeholder="Message" required><br>
+            <button type="submit" id="submit-button">Send</button>
           </form>
 
-      </div>
-    
-      <footer>
-        <div id="link-pictures-container">
-        <div id="link-pictures">
-          
-<div><a href="https://www.linkedin.com/in/jonathanrace1/" target="_blank"><img src="img/linkedin.png"></a></div>
-<div><a href="https://codepen.io/jonathan-race" target="_blank"><img src="img/codepen.png"></a></div>
-<div><a href="https://github.com/jonathanrace77" target="_blank"><img src="img/github.png"></a></div>
         </div>
-        <div id="copyright">JONATHAN RACE ©2020</div>
-      </div>
-      <div class="tri-outer">
-        <div class="tri-inner"></div>
-          <div class="triangle-down">
-        <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 2 1">
-         <g>
-          <path class="triangle-path" d="M0,0 l2,0 l-1,1 z" />
-         </g>
-        </svg>
-        </div>
-      </footer>
-      
+
+        <footer>
+          <div class="colour-border"></div>
+          <div id="copyright">
+            <p>JONATHAN RACE ©2020</p>
+          </div>
+        </footer>
+
     </section>
-  </div>
 
   </main>
 
-</div>
+  </div>
+  <script src="jquery-3.4.1.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="jquery.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
-</html>
 
+
+</html>

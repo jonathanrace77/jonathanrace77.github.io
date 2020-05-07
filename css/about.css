@@ -1,0 +1,110 @@
+#about {
+  height: auto;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#about-container {
+  height: auto;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+#about-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  height: auto;
+  width: auto;
+  margin: 30px 30px 30px 30px;
+  background: #fff;
+  border: solid #dcdcdc 1px;
+  color: #444;
+}
+
+#about-card div {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#about-card H2,
+#about-card h3 {
+  text-align: center;
+}
+
+#profile-pic {
+  border-radius: 500px;
+  width: 200px;
+  height: 200px;
+  margin: 30px;
+}
+
+#about-text {
+  max-width: 485px;
+  padding: 30px;
+  padding-top: 0;
+}
+
+#about-download-cv {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 30px;
+}
+
+#about-download-cv a {
+  text-decoration: none;
+  color: #444;
+}
+
+#pdf-logo {
+  border-radius: 500px;
+  width: 55px;
+  height: auto;
+}
+
+#pdf-logo:hover {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  border-bottom: none !important;
+}
+
+#pdf-download-text:hover {
+  color: black;
+}
+/*# sourceMappingURL=about.css.map */

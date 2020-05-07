@@ -1,1 +1,84 @@
-@import 'main-body', 'media-max-width-800', 'media-max-width-425', 'media-max-height-550', 'media-max-height-350';
+@import "menu", "welcome", "about", "skills", "portfolio", "contact";
+
+body {
+  font-family: "Montserrat";
+  background: #000002;
+  margin: 0px;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow: none;
+}
+
+h2{
+  font-size: 40px;
+  border-bottom: solid 3px;
+  padding-bottom: 10px;
+  margin: 30px;
+  color: #444;
+  text-align: center;
+}
+
+h3{
+  font-size: 25px;
+  font-weight: 500;
+  margin: 0;
+  color: #444;
+}
+
+footer{
+  position: relative;
+  height: 75px;
+  width: 100vw;
+  background: #000002;
+}
+
+#copyright{
+display: grid;
+justify-content: center;
+align-content: center;
+height: 100%;
+p{
+  height: auto;
+}
+}
+
+.colour-border{
+  width: 100vw;
+  height: 3px;
+  background-image: linear-gradient(to right, #5D5882 , #E5446D);
+}
+
+#clip-path1{
+  height: 30px;
+  width: 100vw;
+  background: #F4F5F7;
+
+}
+
+#clip-path-inner1{
+  height: 30px;
+  width: 100vw;
+  background: #fff;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+
+#clip-path2{
+  height: 30px;
+  width: 100vw;
+  background: #252934;
+}
+
+#clip-path-inner2{
+  height: 30px;
+  width: 100vw;
+  background: #F4F5F7;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  transform: translateY(-0.3px);
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -75px;
+  visibility: hidden;
+}

@@ -1,52 +1,92 @@
-//Stars video speed
-$(document.getElementById("stars-video")).ready(function() {
-  document.getElementById("stars-video").playbackRate = 0.5;
+$(document).ready(function () {
+  //About section 3D background
+
+  VANTA.NET({
+    el: "#about",
+    mouseControls: true,
+    touchControls: true,
+    minHeight: 200.0,
+    minWidth: 200.0,
+    scale: 1.0,
+    scaleMobile: 1.0,
+    color: 0xb6b6b6,
+    backgroundColor: 0xffffff,
+    points: 7,
+  });
+
+  // Slider
+  $(".slider-single").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: false,
+    adaptiveHeight: false,
+    infinite: true,
+    useTransform: true,
+    speed: 400,
+    cssEase: "cubic-bezier(0.77, 0, 0.18, 1)",
+  });
+
+  $(".slider-nav")
+    .on("init", function (event, slick) {
+      $(".slider-nav .slick-slide.slick-current").addClass("is-active");
+    })
+    .slick({
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      dots: false,
+      focusOnSelect: false,
+      infinite: true,
+      autoplay: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 5,
+          },
+        },
+        {
+          breakpoint: 640,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          },
+        },
+        {
+          breakpoint: 420,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+
+  $(".slider-single").on("afterChange", function (event, slick, currentSlide) {
+    $(".slider-nav").slick("slickGoTo", currentSlide);
+    var currrentNavSlideElem =
+      '.slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
+    $(".slider-nav .slick-slide.is-active").removeClass("is-active");
+    $(currrentNavSlideElem).addClass("is-active");
+  });
+
+  $(".slider-nav").on("click", ".slick-slide", function (event) {
+    event.preventDefault();
+    var goToSingleSlide = $(this).data("slick-index");
+
+    $(".slider-single").slick("slickGoTo", goToSingleSlide);
+  });
 });
 
-$(document).ready(function() {
-  //Fade in text in welcome section
-  $("h1").animate({ opacity: "1" }, 2000);
-  $("p").animate({ opacity: "1" }, 3000);
+// Mobile Menu
 
-  //Animate menu bar to slide down
-  $("#navbar").animate({ top: "0px" }, 3000);
-
-  //Mobile link clicked -> close menu
-  $("li").on("click", function() {
-    if (document.getElementById("navcontents").className != "topnav") {
-      document.getElementById("navcontents").className = "topnav";
-      $("#navbar").css("left", "100vw");
-    }
-  });
-
-  //Set menu colours (based on screen position)
-  $("#snap-container").scroll(function() {
-    setMenuColor();
-  });
-
-  //Set menu hover colours
-  $("li a").hover(
-    function() {
-      if (
-        $("#snap-container").scrollTop() / $(window).height() > 1 - 0.03 &&
-        $(window).width() > 800
-      ) {
-        $(this).css("color", "#464646");
-      } else {
-        $(this).css("color", "#BACEE0");
-      }
-    },
-    function() {
-      if (
-        $("#snap-container").scrollTop() / $(window).height() > 1 - 0.03 &&
-        $(window).width() > 800
-      ) {
-        $(this).css("color", "#464646");
-      } else {
-        $(this).css("color", "#FFF");
-      }
-    }
-  );
+//Mobile link clicked -> close menu
+$("li").on("click", function () {
+  if (document.getElementById("navcontents").className != "topnav") {
+    document.getElementById("navcontents").className = "topnav";
+    $("#navbar").css("left", "100vw");
+  }
 });
 
 //Mobile menu clicked
@@ -58,114 +98,23 @@ function mobileMenu() {
     $("#navbar").animate({ left: "0vw" }, 300);
     $("#navcontents").css("opacity", "1");
     $("#navbar").css("opacity", "1");
-    setMenuColor();
+    //setMenuColor();
   } else {
     x.className = "topnav";
     $("#navbar").animate({ left: "100vw" }, 300);
     $("body").css({ position: "static", overflow: "auto" });
   }
-}
 
-//Change Menu style on resize
+  //Change Menu style on resize
 $(window).on("resize", function(event) {
   var windowSize = $(window).width(); // Could've done $(this).width()
   if (windowSize > 800) {
     document.getElementById("navbar").style.display = "block";
     document.getElementById("navcontents").className = "topnav";
-    setMenuColor();
-    $("#navbar").css("left", "4vw");
+    $("#navbar").css("left", "0vw");
   } else if (windowSize <= 800) {
     document.getElementById("navbar").style.display = "none";
     $("#navbar").css("left", "100vw");
   }
 });
-
-let skillsShown = 0;
-
-//Set menu colours Function
-let setMenuColor = () => {
-  if (
-    $("#snap-container").scrollTop() / $(window).height() > 1 - 0.03 &&
-    $(window).width() > 800
-  ) {
-    $("li a").css("color", "#5C5757");
-    //Skills animate section
-    if (!$("#skills-left").hasClass("animate")) {
-      $("#skills-left").addClass("animate");
-    }
-
-    if (skillsShown === 0) {
-      let timeM = 70;
-
-      setTimeout(function() {
-        $("#skill-id-1").animate({ opacity: "1" }, 10 * timeM);
-      }, 1 * timeM);
-
-      setTimeout(function() {
-        $("#skill-id-2").animate({ opacity: "1" }, 10 * timeM);
-      }, 2 * timeM);
-
-      setTimeout(function() {
-        $("#skill-id-3").animate({ opacity: "1" }, 10 * timeM);
-      }, 3 * timeM);
-
-      setTimeout(function() {
-        $("#skill-id-4").animate({ opacity: "1" }, 10 * timeM);
-      }, 4 * timeM);
-
-      setTimeout(function() {
-        $("#skill-id-5").animate({ opacity: "1" }, 10 * timeM);
-      }, 5 * timeM);
-
-      setTimeout(function() {
-        $("#skill-id-6").animate({ opacity: "1" }, 10 * timeM);
-      }, 6 * timeM);
-
-      setTimeout(function() {
-        $("#skill-id-7").animate({ opacity: "1" }, 10 * timeM);
-      }, 7 * timeM);
-
-      setTimeout(function() {
-        $("#skill-id-8").animate({ opacity: "1" }, 10 * timeM);
-      }, 8 * timeM);
-
-      setTimeout(function() {
-        $("#skill-id-9").animate({ opacity: "1" }, 10 * timeM);
-      }, 9 * timeM);
-
-      setTimeout(function() {
-        $("#skill-id-10").animate({ opacity: "1" }, 10 * timeM);
-      }, 10 * timeM);
-
-      setTimeout(function() {
-        $("#skill-id-11").animate({ opacity: "1" }, 10 * timeM);
-      }, 11 * timeM);
-
-      setTimeout(function() {
-        $("#skill-id-12").animate({ opacity: "1" }, 10 * timeM);
-      }, 12 * timeM);
-
-      skillsShown = 1;
-    }
-  } else {
-    $("li a").css("color", "#FFF");
-  }
-};
-
-//Bouncing arrow icon
-$("img").hover(
-  function() {
-    $(this).data("bounce", true);
-    bounce($(this));
-  },
-  function() {
-    $(this).data("bounce", false);
-  }
-);
-
-function bounce($elem) {
-  $elem.effect("bounce", { times: 1, distance: 10 }, 500, function() {
-    if ($(this).data("bounce")) bounce($elem);
-    else $elem.stop();
-  });
 }

@@ -1,0 +1,78 @@
+#about {
+  height: auto;
+  width: 100%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+#about-container {
+  height: auto;
+  width: 100%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+#about-card {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-column: 1/2;
+  height: auto;
+  width: auto;
+  margin: 30px 30px 30px 30px;
+  background: #fff;
+  border: solid #dcdcdc 1px;
+  color: #444;
+  div {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+  }
+  H2,
+  h3 {
+    text-align: center;
+  }
+}
+
+#profile-pic {
+  border-radius: 500px;
+  width: 200px;
+  height: 200px;
+  margin: 30px;
+}
+
+#about-text {
+  max-width: 485px;
+  padding: 30px;
+  padding-top: 0;
+}
+
+#about-download-cv {
+  display: flex !important;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 30px;
+  a {
+    text-decoration: none;
+    color: #444;
+  }
+}
+
+#pdf-logo {
+  border-radius: 500px;
+  width: 55px;
+  height: auto;
+}
+
+#pdf-logo:hover {
+  transition: 0.1s;
+  transform: scale(1.2);
+  border-bottom: none !important;
+}
+
+#pdf-download-text:hover {
+  color: black;
+}

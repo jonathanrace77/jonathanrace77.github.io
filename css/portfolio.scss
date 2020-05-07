@@ -1,0 +1,137 @@
+#portfolio {
+  background: #F4F5F7;
+  height: auto;
+  width: 100%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+#portfolio-title {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  h2 {
+    width: auto;
+  }
+}
+
+#portfolio-card {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.portfolio-carousel {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  color: black;
+  max-width: 50vw;
+  width: 100%;
+  height: 100%;
+  div {
+    display: grid;
+    align-content: flex-start;
+    justify-content: center;
+    width: 600px;
+    height: 500px;
+    padding: 0;
+    margin: 0;
+
+    h3 {
+      text-align: center;
+      color: black;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.js .slider-single > div:nth-child(1n + 2) {
+  display: none;
+}
+
+.js .slider-single.slick-initialized > div:nth-child(1n + 2) {
+  display: block;
+}
+
+#page {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: grid;
+  justify-content: center;
+}
+
+.row {
+  height: auto;
+  width: 80vw;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+.slider-single {
+  display: grid !important;
+  align-content: center !important;
+  justify-content: center !important;
+  width: 100%;
+  margin-bottom: 15px;
+  div {
+    display: block !important;
+    align-content: center !important;
+    justify-content: center !important;
+    width: 100%;
+
+    img {
+      height: auto;
+      max-width: 800px;
+      width: 100%;
+    }
+  }
+}
+
+.slider-single h3 {
+  line-height: 10rem;
+}
+
+.slider-nav {
+  div {
+    height: 100%;
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+.slider-nav h3::before {
+  content: "";
+  display: block;
+  padding-top: 75%;
+}
+
+.slider-nav h3 span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slider-nav .slick-slide {
+  cursor: pointer;
+}
+
+.slick-slide.is-active h3 {
+  color: #c00;
+  background-color: #fff;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+}

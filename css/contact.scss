@@ -1,0 +1,143 @@
+
+#contact {
+    position: relative;
+    height: auto;
+    background: #252934;
+    color: #fff;
+    padding: 0 0;
+    h2{
+      color: #fff;
+      width: auto;
+    }
+  }
+  
+  #contact-container{
+    background-color: #252934;
+    padding: 0;
+  }
+  
+  #contact > div {
+    //padding: 30px;
+    margin: 0;
+  }
+  
+  #contact-title{
+    padding-top: 30px;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  #contact-text{
+    margin: 0;
+    width: auto;
+    p{
+      margin: 30px;
+      margin-top: 0;
+      width: auto;
+    }
+  }
+  
+  #contact-form {
+    display: -ms-grid;
+    display: grid;
+    text-align: center;
+    color: red;
+    //margin: 0;
+  }
+  
+  #name {
+    width: 500px;
+    padding: 10px;
+    margin: 5px;
+    margin-top: 0;
+    height: 18px;
+    border-radius: 3px;
+    border-style: none;
+    background: rgb(30,36,45);
+    border-width: 1px;
+    font-size: 16px;
+  }
+  
+  #email {
+    width: 500px;
+    padding: 10px;
+    margin: 5px;
+    height: 18px;
+    border-radius: 3px;
+    border-style: none;
+    background: rgb(30,36,45);
+    border-width: 1px;
+    font-size: 16px;
+  }
+  
+  #message {
+    width: 500px;
+    vertical-align: top;
+    padding: 10px 10px 130px 10px;
+    margin: 5px;
+    height: 10px;
+    border-radius: 3px;
+    border-style: none;
+    background: rgb(30,36,45);
+    border-width: 1px;
+    font-size: 16px;
+  }
+  
+  #submit-button {
+    color: #fff;
+    background: #5ad07d;
+    width: 100px;
+    height: 38px;
+    margin: 5px;
+    margin-bottom: 60px;
+    border-radius: 3px;
+    border-style: none;
+    font-size: 16px;
+  }
+
+  #submit-button:hover {
+    transition: 0.1s;
+  transform: scale(1.1);
+  }
+  
+
+  @media only screen and (max-width: 500px) {
+    #name {
+      width: 80vw;
+      padding: 10px;
+      margin: 5px;
+      margin-top: 0;
+      height: 18px;
+      border-radius: 3px;
+      border-style: none;
+      background: rgb(30,36,45);
+      border-width: 1px;
+      font-size: 16px;
+    }
+    
+    #email {
+      width: 80vw;
+      padding: 10px;
+      margin: 5px;
+      height: 18px;
+      border-radius: 3px;
+      border-style: none;
+      background: rgb(30,36,45);
+      border-width: 1px;
+      font-size: 16px;
+    }
+    
+    #message {
+      width: 80vw;
+      vertical-align: top;
+      padding: 10px 10px 130px 10px;
+      margin: 5px;
+      height: 10px;
+      border-radius: 3px;
+      border-style: none;
+      background: rgb(30,36,45);
+      border-width: 1px;
+      font-size: 16px;
+    }
+  }

@@ -1,0 +1,122 @@
+#skills {
+  background: #fff;
+  height: auto;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#skills-card {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+  width: auto;
+  margin: 30px 30px 30px 30px;
+  background: #fff;
+  border: solid #dcdcdc 1px;
+  color: #444;
+}
+
+#skills-card div {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#skills-card H2,
+#skills-card h3 {
+  text-align: center;
+}
+
+#skills-card-inner {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+}
+
+#skills-card-text {
+  padding: 30px;
+  padding-top: 0;
+}
+
+#skills-card-text ul {
+  list-style-type: square;
+  padding-left: 32px;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+#skills-card-text li {
+  padding-bottom: 15px;
+}
+
+#skills-card-badges {
+  width: 100%;
+  height: 100%;
+}
+
+.skills-container-inner {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.skills-container-inner div {
+  margin: 0px 15px 30px 15px;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  width: 75px;
+}
+
+.skills-container-inner img {
+  width: 50px;
+  height: auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  #about-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr auto;
+        grid-template-rows: 1fr auto;
+  }
+  #about-card {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  #skills-card {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+}
+/*# sourceMappingURL=skills.css.map */
