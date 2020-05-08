@@ -660,7 +660,7 @@ span.line {
 }
 
 .slider-single div img {
-  height: auto;
+  height: 300px;
   max-height: 450px;
   max-width: 800px;
   width: 80vw;
