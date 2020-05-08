@@ -653,7 +653,7 @@ span.line {
 }
 
 .slider-single div img {
-  height: 600px;
+  height: auto;
   max-width: 800px;
   width: 100%;
 }
