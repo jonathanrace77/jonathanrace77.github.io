@@ -4,6 +4,7 @@
   display: grid;
   align-content: center;
   justify-content: center;
+  background: #fff;
 }
 
 #about-container {
@@ -24,8 +25,9 @@
   width: auto;
   margin: 30px 30px 30px 30px;
   background: #fff;
-  border: solid #dcdcdc 1px;
+  //border: solid #dcdcdc 1px;
   color: #444;
+  box-shadow: 2px 2px 4px #666;
   div {
     display: grid;
     align-content: center;

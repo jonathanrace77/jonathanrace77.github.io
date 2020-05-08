@@ -1,6 +1,6 @@
 $(document).ready(function () {
   //About section 3D background
-
+/*
   VANTA.NET({
     el: "#about",
     mouseControls: true,
@@ -13,7 +13,7 @@ $(document).ready(function () {
     backgroundColor: 0xffffff,
     points: 7,
   });
-
+*/
   // Slider
   $(".slider-single").slick({
     slidesToShow: 1,
