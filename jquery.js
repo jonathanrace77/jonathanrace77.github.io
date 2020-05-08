@@ -17,7 +17,7 @@ $(document).ready(function () {
   // Slider
   $(".slider-single").slick({
     slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToScroll: 9,
     arrows: true,
     fade: false,
     adaptiveHeight: false,
@@ -33,7 +33,7 @@ $(document).ready(function () {
     })
     .slick({
       slidesToShow: 3,
-      slidesToScroll: 3,
+      slidesToScroll: 9,
       dots: false,
       focusOnSelect: false,
       infinite: true,
@@ -43,21 +43,21 @@ $(document).ready(function () {
           breakpoint: 1024,
           settings: {
             slidesToShow: 3,
-            slidesToScroll: 5,
+            slidesToScroll: 9,
           },
         },
         {
           breakpoint: 640,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToScroll: 9,
           },
         },
         {
           breakpoint: 420,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1,
+            slidesToScroll: 9,
           },
         },
       ],
