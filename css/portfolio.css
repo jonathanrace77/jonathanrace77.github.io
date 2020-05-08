@@ -115,6 +115,9 @@
   max-height: 450px;
   max-width: 800px;
   background: green;
+  display: table !important;
+  table-layout: fixed !important;
+  width: 100% !important;
 }
 
 .slider-single div {
@@ -125,11 +128,12 @@
       -ms-flex-pack: center !important;
           justify-content: center !important;
   width: 100%;
+  height: 100%;
   background: blue;
 }
 
 .slider-single div img {
-  height: 300px;
+  height: auto;
   max-height: 450px;
   max-width: 800px;
   width: 80vw;
