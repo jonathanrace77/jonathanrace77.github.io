@@ -82,3 +82,9 @@ a.anchor {
   top: -75px;
   visibility: hidden;
 }
+
+@media only screen and (max-width: 750px){
+  a.anchor {
+    top: 0px;
+  }
+}

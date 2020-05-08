@@ -659,6 +659,7 @@ span.line {
 
 .slider-single div img {
   height: auto;
+  max-height: 450px;
   max-width: 800px;
   width: 80vw;
 }
@@ -930,5 +931,11 @@ a.anchor {
   position: relative;
   top: -75px;
   visibility: hidden;
+}
+
+@media only screen and (max-width: 750px) {
+  a.anchor {
+    top: 0px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
