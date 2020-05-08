@@ -120,6 +120,7 @@
       -ms-flex-pack: center !important;
           justify-content: center !important;
   width: 100%;
+  height: 100%;
 }
 
 .slider-single div img {
