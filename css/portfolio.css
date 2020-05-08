@@ -134,8 +134,6 @@
 
 .slider-nav div {
   height: 100%;
-  -webkit-transition: none;
-  transition: none;
 }
 
 .slider-nav div img {
