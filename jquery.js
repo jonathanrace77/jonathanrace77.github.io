@@ -17,7 +17,7 @@ $(document).ready(function () {
   // Slider
   $(".slider-single").slick({
     slidesToShow: 1,
-    slidesToScroll: 9,
+    slidesToScroll: 1,
     arrows: true,
     fade: false,
     adaptiveHeight: false,
@@ -50,14 +50,14 @@ $(document).ready(function () {
           breakpoint: 640,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 3,
+            slidesToScroll: 2,
           },
         },
         {
           breakpoint: 420,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 3,
+            slidesToScroll: 1,
           },
         },
       ],
