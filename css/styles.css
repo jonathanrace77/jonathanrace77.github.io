@@ -645,6 +645,8 @@ span.line {
           justify-content: center !important;
   width: 100%;
   margin-bottom: 15px;
+  max-height: 450px;
+  max-width: 800px;
 }
 
 .slider-single div {
