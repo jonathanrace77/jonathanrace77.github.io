@@ -85,17 +85,19 @@
   margin-bottom: 15px;
   max-height: 450px;
   max-width: 800px;
+  background: green;
   div {
     display: block !important;
     align-content: center !important;
     justify-content: center !important;
     width: 100%;
+    background: blue;
     img {
       height: 300px;
       max-height: 450px;
       max-width: 800px;
       width: 80vw;
-      //background: purple;
+      background: purple;
     }
   }
 }

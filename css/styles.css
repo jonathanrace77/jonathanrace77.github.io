@@ -647,6 +647,7 @@ span.line {
   margin-bottom: 15px;
   max-height: 450px;
   max-width: 800px;
+  background: green;
 }
 
 .slider-single div {
@@ -657,6 +658,7 @@ span.line {
       -ms-flex-pack: center !important;
           justify-content: center !important;
   width: 100%;
+  background: blue;
 }
 
 .slider-single div img {
@@ -664,6 +666,7 @@ span.line {
   max-height: 450px;
   max-width: 800px;
   width: 80vw;
+  background: purple;
 }
 
 .slider-single h3 {
