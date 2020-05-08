@@ -86,14 +86,12 @@
     align-content: center !important;
     justify-content: center !important;
     width: 100%;
-    p{
-      position: absolute;
-      //opacity: 0;
-    }
     img {
       height: auto;
       max-width: 800px;
-      width: 100%;
+      //width: 100%;
+      width: 80vw;
+      background: purple;
     }
   }
 }

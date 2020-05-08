@@ -122,14 +122,11 @@
   width: 100%;
 }
 
-.slider-single div p {
-  position: absolute;
-}
-
 .slider-single div img {
   height: auto;
   max-width: 800px;
-  width: 100%;
+  width: 80vw;
+  background: purple;
 }
 
 .slider-single h3 {
