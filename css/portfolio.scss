@@ -78,32 +78,27 @@
 }
 
 .slider-single {
-  display: grid !important;
   align-content: center !important;
   justify-content: center !important;
-  width: 100%;
   margin-bottom: 15px;
   max-height: 450px;
   max-width: 800px;
-  background: green;
 
 	display: table !important;
 	table-layout: fixed !important;
 	width: 100% !important;
-
+  box-shadow: 2px 2px 4px #666;
   div {
     display: block !important;
     align-content: center !important;
     justify-content: center !important;
     width: 100%;
     height: 100%;
-    background: blue;
     img {
       height: auto;
       max-height: 450px;
       max-width: 800px;
       width: 80vw;
-      background: purple;
     }
   }
 }
@@ -115,6 +110,7 @@
 .slider-nav {
   div {
     height: 100%;
+    box-shadow: 2px 2px 4px #666;
     //transition: none;
     img {
       height: auto;
