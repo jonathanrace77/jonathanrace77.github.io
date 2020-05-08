@@ -748,7 +748,6 @@ span.line {
   display: -ms-grid;
   display: grid;
   text-align: center;
-  color: red;
 }
 
 #name {
@@ -762,6 +761,7 @@ span.line {
   background: #1e242d;
   border-width: 1px;
   font-size: 16px;
+  color: #fff;
 }
 
 #email {
@@ -774,6 +774,7 @@ span.line {
   background: #1e242d;
   border-width: 1px;
   font-size: 16px;
+  color: #fff;
 }
 
 #message {
@@ -787,6 +788,7 @@ span.line {
   background: #1e242d;
   border-width: 1px;
   font-size: 16px;
+  color: #fff;
 }
 
 #submit-button {
@@ -808,41 +810,31 @@ span.line {
           transform: scale(1.1);
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid green;
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px #1e242d inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 @media only screen and (max-width: 500px) {
   #name {
     width: 80vw;
-    padding: 10px;
-    margin: 5px;
-    margin-top: 0;
-    height: 18px;
-    border-radius: 3px;
-    border-style: none;
-    background: #1e242d;
-    border-width: 1px;
-    font-size: 16px;
   }
   #email {
     width: 80vw;
-    padding: 10px;
-    margin: 5px;
-    height: 18px;
-    border-radius: 3px;
-    border-style: none;
-    background: #1e242d;
-    border-width: 1px;
-    font-size: 16px;
   }
   #message {
     width: 80vw;
-    vertical-align: top;
-    padding: 10px 10px 130px 10px;
-    margin: 5px;
-    height: 10px;
-    border-radius: 3px;
-    border-style: none;
-    background: #1e242d;
-    border-width: 1px;
-    font-size: 16px;
   }
 }
 
