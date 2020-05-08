@@ -650,7 +650,7 @@ span.line {
       -ms-flex-pack: center !important;
           justify-content: center !important;
   width: 100%;
-  height: 100%;
+  height: 600px;
 }
 
 .slider-single div img {
