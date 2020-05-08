@@ -122,6 +122,11 @@
   width: 100%;
 }
 
+.slider-single div p {
+  position: absolute;
+  opacity: 0;
+}
+
 .slider-single div img {
   height: auto;
   max-width: 800px;
