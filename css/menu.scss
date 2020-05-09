@@ -8,8 +8,8 @@ html {
   display: grid;
 }
 
-.logo{
-  a:hover{
+.logo {
+  a:hover {
     border-bottom: none !important;
   }
 }
@@ -18,14 +18,6 @@ html {
   transition: 0.1s;
   transform: scale(1.2);
   border-bottom: none !important;
-}
-
-#nav-outer{
-  display: block;
-  box-sizing: border-box;
-  padding: 15px;
-  background: #000002;
-  z-index: 5;
 }
 
 #navbar {
@@ -39,38 +31,45 @@ html {
   top: 0;
   z-index: 5;
 
+  ul {
+    display: table;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 10px;
+  }
 
-ul {
-  display: table;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  height: 10px;
+  li {
+    height: 45px;
+    float: left;
+    margin-right: 45px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    border-bottom: solid 2px;
+    padding-bottom: 2px;
+    color: #e5446d;
+    transition: 0.1s;
+  }
 }
 
-li {
-  height: 45px;
-  float: left;
-  margin-right: 45px;
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-li a {
+#nav-outer {
   display: block;
-  color: #fff;
-  text-decoration: none;
-}
-
-li a:hover {
-  border-bottom: solid 2px;
-  padding-bottom: 2px;
-  color: #e5446d;
-  transition: 0.1s;
-}
-
+  box-sizing: border-box;
+  padding: 15px;
+  background: #000002;
+  //background: blue;
+  z-index: 5;
 }
 
 #navcontents {
@@ -79,16 +78,19 @@ li a:hover {
   padding: 0;
   height: 45px;
   width: 100%;
-  align-content: center;
+  //align-content: center;
   grid-template-columns: 2.45fr 1fr;
+  grid-row: 1fr;
+  //background: red;
 }
 
-#social-container{
+#social-container {
+  //background: purple;
   display: grid;
   align-content: flex-end;
   justify-content: flex-end;
   padding: 0;
-  ul{
+  ul {
     width: auto;
   }
 
@@ -97,13 +99,13 @@ li a:hover {
     margin-left: 45px;
   }
 
-  img{
+  img {
     height: 20px;
     width: 20px;
   }
 
   li a:hover {
-border-bottom: none !important;
+    border-bottom: none !important;
   }
 }
 
@@ -116,7 +118,7 @@ border-bottom: none !important;
   color: #ccc;
 }
 
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 750px) {
   #navbar {
     display: none;
     opacity: 0;
@@ -126,11 +128,8 @@ border-bottom: none !important;
     z-index: 500;
   }
 
-  #nav-outer{
+  #nav-outer {
     background: #000002;
-    display: grid;
-    justify-content: center;
-    align-content: center;
     height: 100%;
     padding: 0;
     margin: 0;
@@ -138,33 +137,46 @@ border-bottom: none !important;
 
   #navcontents {
     display: -ms-grid;
+    grid-template-columns: 1fr 1fr;
+    //grid-template-rows: 3fr 1fr;
+    align-content: center;
+    justify-content: center;
     display: grid;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     right: 0;
     background: #000002;
     opacity: 0;
-    justify-items: center;
     z-index: 500;
     margin: 0;
+    //background: red;
+    padding: 60px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
   }
   ul {
+    //background: blue;
     display: -ms-grid;
-    display: grid;
-    width: 50vw;
-    height: 50vh;
+    display: block;
+    width: 150px;
+    height: 100% !important;
+    //margin: 200px;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
   li {
-    font-size: 5.3vw;
-    width: 50vw;
+    font-size: 24px;
+    //margin-left: 30px;
+    margin-bottom: 7.5px;
+    margin-top: 7.5px;
+    //@extend: purple;
     height: auto;
-    text-align: center;
   }
   .topnav a:not(:first-child) {
     display: none;
@@ -175,7 +187,17 @@ border-bottom: none !important;
     color: #ccc;
   }
 
-  #navbar{
+  #link-container {
+    //background: purple;
+    display: grid;
+    justify-content: flex-start;
+    align-content: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  #navbar {
     display: none;
   }
 
@@ -188,4 +210,30 @@ border-bottom: none !important;
     color: #ccc;
   }
 
+  #social-container {
+    display: grid;
+    align-content: center;
+    justify-content: flex-end;
+    height: 100%;
+    //background: green;
+    width: 100%;
+    ul {
+      width: 30px !important;
+      min-height: 100% !important;
+      //background: pink;
+    }
+
+    li {
+      width: 30px !important;
+      height: 30px !important;
+      margin: 30px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    img {
+      height: 30px;
+      width: 30px;
+    }
+  }
 }

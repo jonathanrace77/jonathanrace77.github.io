@@ -54,7 +54,7 @@ span.line {
 
 @media only screen and (max-height: 700px) {
   #welcome-background {
-    background: rgba(0, 0, 2, 0.25);
+    //background: rgba(0, 0, 2, 0.25);
   }
   #intro-message {
     h1 {
@@ -66,7 +66,8 @@ span.line {
 
 @media only screen and (max-height: 500px) {
   #welcome-background {
-    background: rgba(0, 0, 2, 0.75);
+    //background: rgba(0, 0, 2, 0.6);
+    background-image: linear-gradient(to right, rgba(0, 0, 2, 0.75), rgba(0, 0, 2, 0.25));
   }
   #intro-message {
     h1 {
@@ -76,9 +77,9 @@ span.line {
   }
 }
 
-@media only screen and (max-width: 715px) {
+@media only screen and (max-width: 750px) {
   #welcome-background {
-    background: rgba(0, 0, 2, 0.25);
+    //background: rgba(0, 0, 2, 0.25);
   }
   #intro-message {
     margin-left: 15px;
