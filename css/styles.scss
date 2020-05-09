@@ -6,7 +6,6 @@ body {
   margin: 0px;
   width: 100%;
   overflow-x: hidden;
-  overflow: none;
 }
 
 h2{
@@ -86,5 +85,9 @@ a.anchor {
 @media only screen and (max-width: 750px){
   a.anchor {
     top: 0px;
+  }
+
+  .lock-scroll {
+    overflow-y: hidden;
   }
 }

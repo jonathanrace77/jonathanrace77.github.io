@@ -79,7 +79,20 @@ $(document).ready(function () {
   });
 });
 
+
+
 // Mobile Menu
+
+//Disable scroll on mobile menu
+let lockScroll = () => {
+  if ($("body").hasClass("lock-scroll")) {
+    $("body").removeClass("lock-scroll");
+    console.log("unlocking");
+  } else {
+    $("body").addClass("lock-scroll");
+    console.log("locking");
+  }
+};
 
 //Mobile link clicked -> close menu
 $("li").on("click", function () {
@@ -92,13 +105,13 @@ $("li").on("click", function () {
 //Mobile menu clicked
 function mobileMenu() {
   var x = document.getElementById("navcontents");
+  lockScroll();
   if (x.className === "topnav") {
     x.className += " responsive";
     document.getElementById("navbar").style.display = "block";
     $("#navbar").animate({ left: "0vw" }, 300);
     $("#navcontents").css("opacity", "1");
     $("#navbar").css("opacity", "1");
-    //setMenuColor();
   } else {
     x.className = "topnav";
     $("#navbar").animate({ left: "100vw" }, 300);
@@ -117,4 +130,6 @@ $(window).on("resize", function(event) {
     $("#navbar").css("left", "100vw");
   }
 });
+
 }
+
