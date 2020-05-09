@@ -85,12 +85,12 @@ $(document).ready(function () {
 
 //Disable scroll on mobile menu
 let lockScroll = () => {
-  if ($("body").hasClass("lock-scroll")) {
-    $("body").removeClass("lock-scroll");
-    console.log("unlocking");
-  } else {
-    $("body").addClass("lock-scroll");
+  if ($("body").css("overflow-y", 'scroll')) {
+    $('body').css('overflow-y', 'hidden');
     console.log("locking");
+  } else {
+    $('body').css('overflow-y', 'scroll');
+    console.log("unlocking");
   }
 };
 
