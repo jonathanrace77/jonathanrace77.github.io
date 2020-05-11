@@ -19,12 +19,7 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    //fade: false,
-    //adaptiveHeight: false,
-    //infinite: true,
-    //useTransform: true,
-    //speed: 400,
-    //cssEase: "cubic-bezier(0.77, 0, 0.18, 1)",
+    fade: true,
   });
 
   $(".slider-nav")
@@ -78,8 +73,6 @@ $(document).ready(function () {
     $(".slider-single").slick("slickGoTo", goToSingleSlide);
   });
 });
-
-
 
 // Mobile Menu
 
