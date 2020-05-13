@@ -76,17 +76,6 @@ $(document).ready(function () {
 
 // Mobile Menu
 
-//Disable scroll on mobile menu
-let lockScroll = () => {
-  if ($("body").css("overflow-y", 'scroll')) {
-    $('body').css('overflow-y', 'hidden');
-    console.log("locking");
-  } else {
-    $('body').css('overflow-y', 'scroll');
-    console.log("unlocking");
-  }
-};
-
 //Mobile link clicked -> close menu
 $("li").on("click", function () {
   if (document.getElementById("navcontents").className != "topnav") {
@@ -105,10 +94,13 @@ function mobileMenu() {
     $("#navbar").animate({ left: "0vw" }, 300);
     $("#navcontents").css("opacity", "1");
     $("#navbar").css("opacity", "1");
+    //Disable scroll on mobile menu
+    $('body').css('overflow-y', 'hidden');
   } else {
     x.className = "topnav";
     $("#navbar").animate({ left: "100vw" }, 300);
-    $("body").css({ position: "static", overflow: "auto" });
+    //Enable scroll on mobile menu
+    $('body').css('overflow-y', 'scroll');
   }
 
   //Change Menu style on resize
