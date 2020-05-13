@@ -87,7 +87,6 @@ $("li").on("click", function () {
 //Mobile menu clicked
 function mobileMenu() {
   var x = document.getElementById("navcontents");
-  lockScroll();
   if (x.className === "topnav") {
     x.className += " responsive";
     document.getElementById("navbar").style.display = "block";
