@@ -891,6 +891,10 @@ select:-webkit-autofill:focus {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat";
   background: #000002;

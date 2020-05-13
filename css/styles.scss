@@ -1,5 +1,9 @@
 @import "menu", "welcome", "about", "skills", "portfolio", "contact";
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat";
   background: #000002;
