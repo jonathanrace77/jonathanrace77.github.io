@@ -1,19 +1,4 @@
 $(document).ready(function () {
-  //About section 3D background
-/*
-  VANTA.NET({
-    el: "#about",
-    mouseControls: true,
-    touchControls: true,
-    minHeight: 200.0,
-    minWidth: 200.0,
-    scale: 1.0,
-    scaleMobile: 1.0,
-    color: 0xb6b6b6,
-    backgroundColor: 0xffffff,
-    points: 7,
-  });
-*/
   // Slider
   $(".slider-single").slick({
     slidesToShow: 1,
@@ -69,14 +54,13 @@ $(document).ready(function () {
   $(".slider-nav").on("click", ".slick-slide", function (event) {
     event.preventDefault();
     var goToSingleSlide = $(this).data("slick-index");
-
     $(".slider-single").slick("slickGoTo", goToSingleSlide);
   });
 });
 
 // Mobile Menu
 
-//Mobile link clicked -> close menu
+// Mobile link clicked -> close menu
 $("li").on("click", function () {
   if (document.getElementById("navcontents").className != "topnav") {
     document.getElementById("navcontents").className = "topnav";
@@ -84,7 +68,7 @@ $("li").on("click", function () {
   }
 });
 
-//Mobile menu clicked
+// Mobile menu clicked
 function mobileMenu() {
   var x = document.getElementById("navcontents");
   if (x.className === "topnav") {
@@ -93,27 +77,25 @@ function mobileMenu() {
     $("#navbar").animate({ left: "0vw" }, 300);
     $("#navcontents").css("opacity", "1");
     $("#navbar").css("opacity", "1");
-    //Disable scroll on mobile menu
-    $('body').css('overflow-y', 'hidden');
+    // Disable scroll on mobile menu
+    $("body").css("overflow-y", "hidden");
   } else {
     x.className = "topnav";
     $("#navbar").animate({ left: "100vw" }, 300);
-    //Enable scroll on mobile menu
-    $('body').css('overflow-y', 'scroll');
+    // Enable scroll on mobile menu
+    $("body").css("overflow-y", "scroll");
   }
 
-  //Change Menu style on resize
-$(window).on("resize", function(event) {
-  var windowSize = $(window).width(); // Could've done $(this).width()
-  if (windowSize > 800) {
-    document.getElementById("navbar").style.display = "block";
-    document.getElementById("navcontents").className = "topnav";
-    $("#navbar").css("left", "0vw");
-  } else if (windowSize <= 800) {
-    document.getElementById("navbar").style.display = "none";
-    $("#navbar").css("left", "100vw");
-  }
-});
-
+  // Change Menu style on resize
+  $(window).on("resize", function (event) {
+    var windowSize = $(window).width();
+    if (windowSize > 800) {
+      document.getElementById("navbar").style.display = "block";
+      document.getElementById("navcontents").className = "topnav";
+      $("#navbar").css("left", "0vw");
+    } else if (windowSize <= 800) {
+      document.getElementById("navbar").style.display = "none";
+      $("#navbar").css("left", "100vw");
+    }
+  });
 }
-
