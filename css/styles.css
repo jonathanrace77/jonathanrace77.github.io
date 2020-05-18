@@ -89,8 +89,8 @@ html {
   padding: 0;
   height: 45px;
   width: 100%;
-  -ms-grid-columns: 2.45fr 1fr;
-      grid-template-columns: 2.45fr 1fr;
+  -ms-grid-columns: 1.869225fr 1fr;
+      grid-template-columns: 1.869225fr 1fr;
   -ms-grid-row: 1;
   grid-row: 1fr;
 }
@@ -133,7 +133,7 @@ html {
   color: #ccc;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 785px) {
   #navbar {
     display: none;
     opacity: 0;
@@ -238,7 +238,7 @@ html {
   }
   #social-container li {
     width: 30px !important;
-    height: 30px !important;
+    height: 20px !important;
     margin: 30px;
     margin-left: 0;
     margin-right: 0;
@@ -945,14 +945,14 @@ footer {
 .colour-border {
   width: 100vw;
   height: 3px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#5D5882), to(#E5446D));
-  background-image: linear-gradient(to right, #5D5882, #E5446D);
+  background-image: -webkit-gradient(linear, left top, right top, from(#5d5882), to(#e5446d));
+  background-image: linear-gradient(to right, #5d5882, #e5446d);
 }
 
 #clip-path1 {
   height: 30px;
   width: 100vw;
-  background: #F4F5F7;
+  background: #f4f5f7;
 }
 
 #clip-path-inner1 {
@@ -972,7 +972,7 @@ footer {
 #clip-path-inner2 {
   height: 30px;
   width: 100vw;
-  background: #F4F5F7;
+  background: #f4f5f7;
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
           clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
   -webkit-transform: translateY(-0.3px);
@@ -986,7 +986,7 @@ a.anchor {
   visibility: hidden;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 780px) {
   a.anchor {
     top: 0px;
   }

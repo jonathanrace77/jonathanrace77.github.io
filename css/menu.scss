@@ -68,7 +68,6 @@ html {
   box-sizing: border-box;
   padding: 15px;
   background: #000002;
-  //background: blue;
   z-index: 5;
 }
 
@@ -78,14 +77,11 @@ html {
   padding: 0;
   height: 45px;
   width: 100%;
-  //align-content: center;
-  grid-template-columns: 2.45fr 1fr;
+  grid-template-columns: 1.869225fr 1fr;
   grid-row: 1fr;
-  //background: red;
 }
 
 #social-container {
-  //background: purple;
   display: grid;
   align-content: flex-end;
   justify-content: flex-end;
@@ -118,7 +114,7 @@ html {
   color: #ccc;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 785px) {
   #navbar {
     display: none;
     opacity: 0;
@@ -138,7 +134,6 @@ html {
   #navcontents {
     display: -ms-grid;
     grid-template-columns: 1fr 1fr;
-    //grid-template-rows: 3fr 1fr;
     align-content: center;
     justify-content: center;
     display: grid;
@@ -150,19 +145,16 @@ html {
     opacity: 0;
     z-index: 500;
     margin: 0;
-    //background: red;
     padding: 60px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
   ul {
-    //background: blue;
     display: -ms-grid;
     display: block;
     width: 150px;
     height: 100% !important;
-    //margin: 200px;
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -172,10 +164,8 @@ html {
   }
   li {
     font-size: 24px;
-    //margin-left: 30px;
     margin-bottom: 7.5px;
     margin-top: 7.5px;
-    //@extend: purple;
     height: auto;
   }
   .topnav a:not(:first-child) {
@@ -188,7 +178,6 @@ html {
   }
 
   #link-container {
-    //background: purple;
     display: grid;
     justify-content: flex-start;
     align-content: center;
@@ -215,17 +204,15 @@ html {
     align-content: center;
     justify-content: flex-end;
     height: 100%;
-    //background: green;
     width: 100%;
     ul {
       width: 30px !important;
       min-height: 100% !important;
-      //background: pink;
     }
 
     li {
       width: 30px !important;
-      height: 30px !important;
+      height: 20px !important;
       margin: 30px;
       margin-left: 0;
       margin-right: 0;

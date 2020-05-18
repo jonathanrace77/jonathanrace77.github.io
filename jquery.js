@@ -89,11 +89,11 @@ function mobileMenu() {
   // Change Menu style on resize
   $(window).on("resize", function (event) {
     var windowSize = $(window).width();
-    if (windowSize > 800) {
+    if (windowSize > 785) {
       document.getElementById("navbar").style.display = "block";
       document.getElementById("navcontents").className = "topnav";
       $("#navbar").css("left", "0vw");
-    } else if (windowSize <= 800) {
+    } else if (windowSize <= 785) {
       document.getElementById("navbar").style.display = "none";
       $("#navbar").css("left", "100vw");
     }
