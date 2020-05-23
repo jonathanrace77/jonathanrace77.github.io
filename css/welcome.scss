@@ -52,6 +52,10 @@ span.line {
   display: inline-block;
 }
 
+#about-text p{
+  margin-top: 0px;
+}
+
 @media only screen and (max-height: 700px) {
   #welcome-background {
     //background: rgba(0, 0, 2, 0.25);
