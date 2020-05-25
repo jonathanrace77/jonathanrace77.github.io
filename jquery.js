@@ -1,4 +1,15 @@
 $(document).ready(function () {
+  // Lazy loading images
+  $("#web1 img").attr('src','img/website1.jpg');
+  $("#web2 img").attr('src','img/website2.jpg');
+  $("#web3 img").attr('src','img/website3.jpg');
+  $("#web4 img").attr('src','img/website4.jpg');
+  $("#web5 img").attr('src','img/website5.jpg');
+  $("#web6 img").attr('src','img/website6.jpg');
+  $("#web7 img").attr('src','img/website7.jpg');
+  $("#web8 img").attr('src','img/website8.jpg');
+  $("#web9 img").attr('src','img/website9.jpg');
+
   // Slider
   $(".slider-single").slick({
     slidesToShow: 1,
