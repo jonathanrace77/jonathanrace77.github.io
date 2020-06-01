@@ -555,7 +555,9 @@ span.line {
       -ms-flex-pack: end !important;
           justify-content: end !important;
   width: 1px;
-  height: 25px;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+  height: 22px;
   background-color: rgba(0, 166, 20, 0.75);
   border-radius: 20px 0px 0px 20px;
 }
@@ -569,7 +571,7 @@ span.line {
 .progress-skill-title {
   position: absolute;
   color: #fff;
-  margin-top: 5px;
+  margin-top: 3px;
   margin-left: 15px;
 }
 

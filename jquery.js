@@ -139,7 +139,7 @@ function triggerProgress(){
   i = 1;
 }
 
-let skillsArray = [88, 82, 67, 62, 60, 57, 43, 40, 40, 36, 31, 30];
+let skillsArray = [88, 82, 67, 62, 60, 57, 43, 40, 40, 36, 33, 32];
 let barWidth = 300;  
 
 function move(barNumber) {
@@ -147,15 +147,7 @@ function move(barNumber) {
   if (i == 0) {
     var elem = document.getElementById("myBar" + barNumber);
     var width = 1;
-    var id = setInterval(frame, 1);
-    function frame() {
-      if (width >= (barWidth * (skillsArray[barNumber]/100))) {
-        clearInterval(id);
-        i = 0;
-      } else {
-        width+=2;
-        elem.style.width = width + "px";
-      }
-  }
+    elem.style.width = barWidth * (skillsArray[barNumber]/100) + "px";
+    i = 0;
 }
 }
