@@ -526,30 +526,51 @@ span.line {
 }
 
 .skills-container-inner {
-  width: 100%;
+  width: 40vw;
   height: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
-.skills-container-inner div {
-  margin: 0px 15px 30px 15px;
-  margin-left: 3vw;
-  margin-right: 3vw;
-  width: 75px;
+.myProgress {
+  -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+          justify-content: start !important;
+  width: 300px;
+  background-color: #F1F1F1;
+  background: repeating-linear-gradient(-45deg, #F1F1F1, #F1F1F1 10px, #E8E8E8 10px, #E8E8E8 20px);
+  border: solid 1px;
+  border-color: #E2E2E2;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-size: 12px;
 }
 
-.skills-container-inner img {
-  width: 50px;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-self: center;
+#my-progress-last {
+  margin-bottom: 30px;
+}
+
+.myBar {
+  -webkit-box-pack: end !important;
+      -ms-flex-pack: end !important;
+          justify-content: end !important;
+  width: 1px;
+  height: 25px;
+  background-color: rgba(0, 166, 20, 0.75);
+  border-radius: 20px 0px 0px 20px;
+}
+
+.myBar img {
+  width: 35px !important;
+  height: 35px !important;
+  margin-right: -17.5px;
+}
+
+.progress-skill-title {
+  position: absolute;
+  color: #fff;
+  margin-top: 5px;
+  margin-left: 15px;
 }
 
 @media only screen and (max-width: 1000px) {

@@ -1,3 +1,5 @@
+var i = 0;
+
 $(document).ready(function () {
   // Lazy loading images
   $("#web1 img").attr('src','img/website1.jpg');
@@ -9,6 +11,16 @@ $(document).ready(function () {
   $("#web7 img").attr('src','img/website7.jpg');
   $("#web8 img").attr('src','img/website8.jpg');
   $("#web9 img").attr('src','img/website9.jpg');
+
+  // Trigger Skills Progress
+  var observer = new IntersectionObserver(function(entries) {
+    // isIntersecting is true when element and viewport are overlapping
+    // isIntersecting is false when element and viewport don't overlap
+    if(entries[0].isIntersecting === true)
+    triggerProgress();
+  }, { threshold: [0.25] });
+  
+  observer.observe(document.querySelector("#skills-card-badges"));
 
   // Slider
   $(".slider-single").slick({
@@ -67,6 +79,7 @@ $(document).ready(function () {
     var goToSingleSlide = $(this).data("slick-index");
     $(".slider-single").slick("slickGoTo", goToSingleSlide);
   });
+  
 });
 
 // Mobile Menu
@@ -109,4 +122,40 @@ function mobileMenu() {
       $("#navbar").css("left", "100vw");
     }
   });
+
+  
+}
+
+// Skills Progress
+
+function triggerProgress(){
+  console.log('Checkpoint 3 - Success');
+  var numOfSkills = 12;
+  var j = 0;
+  // Initiate Skills Progress
+  for(j=0;j<numOfSkills;j++){
+    move(j)
+  }
+  i = 1;
+}
+
+let skillsArray = [88, 82, 67, 62, 60, 57, 43, 40, 40, 36, 31, 30];
+let barWidth = 300;  
+
+function move(barNumber) {
+  
+  if (i == 0) {
+    var elem = document.getElementById("myBar" + barNumber);
+    var width = 1;
+    var id = setInterval(frame, 1);
+    function frame() {
+      if (width >= (barWidth * (skillsArray[barNumber]/100))) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width+=2;
+        elem.style.width = width + "px";
+      }
+  }
+}
 }
