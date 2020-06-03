@@ -4,7 +4,7 @@ var numOfPSites = 9;
 
 $(document).ready(function () {
   // Lazy loading images
-  for (i = 1; i < numOfPSites; i++) {
+  for (i = 0; i < numOfPSites+1; i++) {
     $("#web" + i + " img").attr("src", "img/website" + i + ".jpg");
   }
 
