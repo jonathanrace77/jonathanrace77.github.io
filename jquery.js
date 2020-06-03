@@ -1,26 +1,76 @@
-var i = 0;
+var SkillsTriggered = 0;
+var i;
+var numOfPSites = 9;
 
 $(document).ready(function () {
   // Lazy loading images
-  $("#web1 img").attr('src','img/website1.jpg');
-  $("#web2 img").attr('src','img/website2.jpg');
-  $("#web3 img").attr('src','img/website3.jpg');
-  $("#web4 img").attr('src','img/website4.jpg');
-  $("#web5 img").attr('src','img/website5.jpg');
-  $("#web6 img").attr('src','img/website6.jpg');
-  $("#web7 img").attr('src','img/website7.jpg');
-  $("#web8 img").attr('src','img/website8.jpg');
-  $("#web9 img").attr('src','img/website9.jpg');
+  for (i = 1; i < numOfPSites; i++) {
+    $("#web" + i + " img").attr("src", "img/website" + i + ".jpg");
+  }
+
+  // Trigger About
+  var observerAbout = new IntersectionObserver(
+    function (entries) {
+      if (entries[0].isIntersecting === true) triggerAbout("profile-pic");
+    },
+    { threshold: [0.25] }
+  );
+
+  // Trigger About Text
+  var observerAboutText = new IntersectionObserver(
+    function (entries) {
+      if (entries[0].isIntersecting === true) triggerAbout("about-text");
+    },
+    { threshold: [0.25] }
+  );
+
+  // Trigger About CV
+  var observerAboutCv = new IntersectionObserver(
+    function (entries) {
+      if (entries[0].isIntersecting === true) triggerAbout("about-download-cv");
+    },
+    { threshold: [0.25] }
+  );
 
   // Trigger Skills Progress
-  var observer = new IntersectionObserver(function(entries) {
-    // isIntersecting is true when element and viewport are overlapping
-    // isIntersecting is false when element and viewport don't overlap
-    if(entries[0].isIntersecting === true)
-    triggerProgress();
-  }, { threshold: [0.25] });
-  
-  observer.observe(document.querySelector("#skills-card-badges"));
+  var observerSkills = new IntersectionObserver(
+    function (entries) {
+      if (entries[0].isIntersecting === true) triggerProgress();
+    },
+    { threshold: [0.25] }
+  );
+
+  observerAbout.observe(document.querySelector("#profile-pic"));
+  observerAboutText.observe(document.querySelector("#about-text"));
+  observerAboutCv.observe(document.querySelector("#about-download-cv"));
+  observerSkills.observe(document.querySelector("#skills-card-badges"));
+
+  // Skills Progress
+  function triggerProgress() {
+    var numOfSkills = 12;
+    var j = 0;
+    // Initiate Skills Progress
+    for (j = 0; j < numOfSkills; j++) {
+      move(j);
+    }
+    SkillsTriggered = 1;
+  }
+
+  let skillsArray = [88, 82, 67, 62, 60, 57, 43, 40, 40, 36, 33, 32];
+  let barWidth = 300;
+
+  function move(barNumber) {
+    if (SkillsTriggered == 0) {
+      var elem = document.getElementById("myBar" + barNumber);
+      elem.style.width = barWidth * (skillsArray[barNumber] / 100) + "px";
+      SkillsTriggered = 0;
+    }
+  }
+  // About Section Opacity
+  function triggerAbout(element) {
+    var elem = document.getElementById(element);
+    elem.style.opacity = 1;
+  }
 
   // Slider
   $(".slider-single").slick({
@@ -79,7 +129,6 @@ $(document).ready(function () {
     var goToSingleSlide = $(this).data("slick-index");
     $(".slider-single").slick("slickGoTo", goToSingleSlide);
   });
-  
 });
 
 // Mobile Menu
@@ -122,32 +171,4 @@ function mobileMenu() {
       $("#navbar").css("left", "100vw");
     }
   });
-
-  
-}
-
-// Skills Progress
-
-function triggerProgress(){
-  console.log('Checkpoint 3 - Success');
-  var numOfSkills = 12;
-  var j = 0;
-  // Initiate Skills Progress
-  for(j=0;j<numOfSkills;j++){
-    move(j)
-  }
-  i = 1;
-}
-
-let skillsArray = [88, 82, 67, 62, 60, 57, 43, 40, 40, 36, 33, 32];
-let barWidth = 300;  
-
-function move(barNumber) {
-  
-  if (i == 0) {
-    var elem = document.getElementById("myBar" + barNumber);
-    var width = 1;
-    elem.style.width = barWidth * (skillsArray[barNumber]/100) + "px";
-    i = 0;
-}
 }

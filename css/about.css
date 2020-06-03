@@ -65,12 +65,18 @@
   width: 200px;
   height: 200px;
   margin: 30px;
+  opacity: 0;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
 }
 
 #about-text {
   max-width: 485px;
   padding: 30px;
   padding-top: 0;
+  opacity: 0;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
 }
 
 #about-download-cv {
@@ -85,6 +91,9 @@
       -ms-flex-direction: row;
           flex-direction: row;
   margin-bottom: 30px;
+  opacity: 0;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
 }
 
 #about-download-cv a {
